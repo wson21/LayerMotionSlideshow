@@ -5,7 +5,7 @@
 include 'libs/projects/projects.php';
 //include 'libs/slider/slider.php';
 //include 'libs/news/news.php';
-//include 'libs/options.php';
+include 'libs/options.php';
 
 
 /**
