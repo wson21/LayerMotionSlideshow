@@ -157,198 +157,6 @@ function projects_type() {
 }
 
 
-//add_action( 'edit_form_after_editor', 'no_metabox_wspe_1' );
-function no_metabox_wspe_1(){
-
-	global $post;
-	
-    if( 'projects' != $post->post_type )
-		return;
-		
-    wp_nonce_field( plugin_basename( __FILE__ ), 'wspe_1' );	
-	?>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-
-    // Set variables
-    var $image_slideshow_ids = $('#slideshow_images');
-    var $slideshow_images = $('#slideshow_wrapper .slideshow_images');
-
-    // Make images sortable
-    $slideshow_images.sortable({
-        cursor: 'move',
-        items: '.image',
-        update: function(event, ui) {
-            var attachment_ids = '';
-            $('#slideshow_wrapper ul .image').css('cursor', 'default').each(function() {
-                var attachment_id = jQuery(this).attr('data-attachment_id');
-                attachment_ids = attachment_ids + attachment_id + ',';
-            });
-            $image_slideshow_ids.val(attachment_ids);
-        }
-    });
-
-    // Uploading files
-    var slideshow_frame;
-
-    jQuery('.add_slideshow_images').live('click', function(event) {
-
-        event.preventDefault();
-
-        // If the media frame already exists, reopen it.
-        if (slideshow_frame) {
-            slideshow_frame.open();
-            return;
-        }
-
-        // Create the media frame.
-        slideshow_frame = wp.media.frames.downloadable_file = wp.media({
-
-            // Set the title of the modal.
-            title: 'Add Images to Slideshow',
-
-            // Set the button of the modal.
-            button: {
-                text: 'Add to slideshow',
-            },
-
-            states: [
-                new wp.media.controller.Library({
-                    library: wp.media.query({
-                        type: 'image'
-                    }),
-                    multiple: true, // do not allow multiple files, if you want multiple, set true
-                    filterable: 'all' // turn on filters
-                })
-            ]
-
-            // Set to true to allow multiple files to be selected
-            //multiple: true
-
-        });
-
-        var $el = $(this);
-        var attachment_ids = $image_slideshow_ids.val();
-
-        // When an image is selected, run a callback.
-        slideshow_frame.on('select', function() {
-            var selection = slideshow_frame.state().get('selection');
-            selection.map(function(attachment) {
-                attachment = attachment.toJSON();
-                if (attachment.id) {
-                    attachment_ids = attachment_ids ? attachment_ids + "," + attachment
-                        .id : attachment.id;
-                    $slideshow_images.append('\
-								<li class="image" data-attachment_id="' + attachment.id + '">\
-									<img src="' + attachment.url + '" />\
-									<span><a href="#" class="delete_slide" title="Delete image">Delete</a></span>\
-								</li>');
-                }
-            });
-            $image_slideshow_ids.val(attachment_ids);
-        });
-
-        // Finally, open the modal
-        slideshow_frame.open();
-
-    });
-
-    // Remove files
-    $('#slideshow_wrapper').on('click', 'a.delete_slide', function() {
-
-        $(this).closest('.image').remove();
-        var attachment_ids = '';
-
-        $('#slideshow_wrapper ul .image').css('cursor', 'default').each(function() {
-            var attachment_id = jQuery(this).attr('data-attachment_id');
-            attachment_ids = attachment_ids + attachment_id + ',';
-        });
-
-        $image_slideshow_ids.val(attachment_ids);
-        return false;
-
-    });
-
-});
-</script>
-
-<div id="normal-sortables" class="meta-box-sortables ui-sortable">
-    <div id="postexcerpt" class="postbox closed" style="display: block;">
-        <button type="button" class="handlediv button-link" aria-expanded="false">
-            <span class="screen-reader-text">Toggle panel: Slideshow</span><span class="toggle-indicator"
-                aria-hidden="true"></span>
-        </button>
-
-        <h2 class="hndle ui-sortable-handle"><span>Slideshow</span></h2>
-
-        <div class="inside">
-
-            <div><?php echo $post->ID?></div>
-
-            <p class="add_images_wrapper hide-if-no-js">
-                <a href="#" class="add_slideshow_images">Add slideshow images</a>
-            </p>
-
-            <div id="slideshow_wrapper">
-                <ul class="slideshow_images">
-                    <?php
-							if (metadata_exists('post', $post->ID, '_slideshow_images')) {
-								$slideshow_images = get_post_meta($post->ID,'_slideshow_images', TRUE);
-							} else {
-								$attachment_ids = array_filter(array_diff(get_posts('post_parent='.$post->ID.'&numberposts=-1&post_type=attachment&orderby=menu_order&order=ASC&post_mime_type=image&fields=ids'), array(get_post_thumbnail_id())));
-								$slideshow_images = implode(',', $attachment_ids);
-							}
-
-							$attachments = array_filter(explode(',', $slideshow_images));
-
-							if ($attachments) {
-								foreach ($attachments as $attachment_id) {
-									
-									$image_attributes = wp_get_attachment_image_src( $attachment_id );
-									
-									echo '<li class="image" data-attachment_id="'.$attachment_id.'"> <img src="'. $image_attributes[0] .' " class"image" alt="<?php echo $thumb_title;?>"/>
-
-                    <span><a href="#" class="delete_slide" title="Delete image">delete</a></span>
-                    </li>';
-
-                    }
-                    }
-                    ?>
-                </ul>
-                <input type="hidden" id="slideshow_images" name="slideshow_images"
-                    value="<?php echo esc_attr( $slideshow_images ); ?>" />
-                <div class="clear"></div>
-            </div>
-
-
-        </div>
-    </div>
-</div>
-
-<?php		
-}
-
-//add_action( 'save_post', 'save_wpse_1', 10, 2 );
-function save_wpse_1( $post_id, $post_object )
-{
-    if( !isset( $post_object->post_type ) || 'projects' != $post_object->post_type )
-        return;
-
-    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
-        return;
-
-    if ( !isset( $_POST['wspe_1'] ) || !wp_verify_nonce( $_POST['wspe_1'], plugin_basename( __FILE__ ) ) )
-        return;
-		
-	if ( isset($_REQUEST['slideshow_images']) ) {
-		$attachment_ids = array_filter(explode(',', sanitize_text_field($_REQUEST['slideshow_images'] )));
-		update_post_meta($post_id, '_slideshow_images', implode(',', $attachment_ids));
-	}
-
-}
-
-
 add_action( 'admin_enqueue_scripts', 'projects_admin_script_style1' );
 function projects_admin_script_style1( $hook ) {
     global $post_type;
@@ -370,7 +178,6 @@ function projects_admin_script_style1( $hook ) {
 
     }
 }
-
 
 
 add_filter( 'manage_edit-projects_columns', 'my_edit_projects_columns' ) ;
@@ -398,7 +205,7 @@ function my_manage_projects_columns( $column, $post_id ) {
 		case 'thumb' :
 
 			/* Get the post meta. */
-			$duration = get_post_meta( $post_id, 'duration', true );
+		//	$duration = get_post_meta( $post_id, 'duration', true );
 			//$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 			
 			//$image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium');
@@ -407,15 +214,12 @@ function my_manage_projects_columns( $column, $post_id ) {
 			if( $image_attributes ) {?>
 
 
-<img src="<?php echo $image_attributes[0]; ?>" width="80">
+			<img src="<?php echo $image_attributes[0]; ?>" width="50">
 
 
-<?php /*?><img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>"
-    height="<?php echo $image_attributes[2]; ?>"><?php */?>
+	<?php } ?>
 
-<?php } ?>
-
-<?php
+	<?php
 			//echo '<img src="'.$url.'" width="50">';
 			
 			//echo $url;
@@ -503,7 +307,7 @@ function my_manage_projects_columns( $column, $post_id ) {
 }
 
 
-add_filter( 'manage_edit-projects_sortable_columns', 'my_projects_sortable_columns' );
+//add_filter( 'manage_edit-projects_sortable_columns', 'my_projects_sortable_columns' );
 function my_projects_sortable_columns( $columns ) {
 
 	//$columns['pcategory'] = 'pcategory';
@@ -511,6 +315,7 @@ function my_projects_sortable_columns( $columns ) {
 
 	return $columns;
 }
+
 
 
 function get_issues() {
@@ -732,7 +537,7 @@ function custom_slideshow_images_meta_box_func($post){?>
 						$image_attributes = wp_get_attachment_image_src( $attachment_id );
 										
 						echo '<li class="image" data-attachment_id="'.$attachment_id.'"> <img src="'. $image_attributes[0] .' " class"image" alt="<?php echo $thumb_title;?>"/>
-						<span><a href="#" class="delete_slide" title="Delete image"></a></span>
+						<span><a href="#" class="delete_slide" title="Delete image">✕</a></span>
 						</li>'
 					;}
 				}
@@ -755,6 +560,8 @@ function custom_slideshow_images_meta_box_func($post){?>
 			$slideshow_images.sortable({
 				cursor: 'move',
 				items: '.image',
+				connectWith: "#slideshow_wrapper",
+        		containment: "#slideshow_wrapper",
 				update: function(event, ui) {
 					var attachment_ids = '';
 					$('#slideshow_wrapper ul .image').css('cursor', 'default').each(function() {
@@ -818,7 +625,7 @@ function custom_slideshow_images_meta_box_func($post){?>
 							$slideshow_images.append('\
 										<li class="image" data-attachment_id="' + attachment.id + '">\
 											<img src="' + attachment.url + '" />\
-											<span><a href="#" class="delete_slide" title="Delete image"></a></span>\
+											<span><a href="#" class="delete_slide" title="Delete image">✕</a></span>\
 										</li>');
 						}
 					});
