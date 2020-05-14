@@ -1,20 +1,20 @@
 jQuery(document).ready(function ($) {
 
-  $('<div class="welcome"> welcome</div> ').appendTo('body');
-  $('.welcome').css('padding', '50px');
-  $('.box').css('background', 'yellow');
+  // $('<div class="welcome"> welcome</div> ').appendTo('body');
+  // $('.welcome').css('padding', '50px');
+  // $('.box').css('background', 'yellow');
 
-  $('.box').click(function () {
-    $(this).toggleClass('active');
-    $(this).find('div').animate({ height:200},"slow");
-  });
+  // $('.box').click(function () {
+  //   $(this).toggleClass('active');
+  //   $(this).find('div').animate({ height:200},"slow");
+  // });
 
-  gsap.from('.box', {
-    delay:3,
-    duration: 0.5,
-    opacity: 0,
-    ease: "power1.out"
-  });
+  // gsap.from('.box', {
+  //   delay:3,
+  //   duration: 0.5,
+  //   opacity: 0,
+  //   ease: "power1.out"
+  // });
 
   // load & resize windows
   $.event.add(window, 'load', resizeFrame);
@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     var h = $(window).outerHeight();
     var w = $(window).outerWidth();
 
-    bgcolour();
+    //bgcolour();
   }
 
   function bgcolour(){
@@ -42,17 +42,5 @@ jQuery(document).ready(function ($) {
     });
 
   }
-
-  // function multiply(x,y) {
-  //   return (x * y);
-  // }
-
-  // console.log(multiply(2, 2));
-  
-  // addme('welcome to my world','20');
-
-  // function addme(e){ 
-  //   $("body").append(e);
-  // }
 
 });

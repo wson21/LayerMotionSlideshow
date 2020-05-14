@@ -68,12 +68,12 @@ function custom_scripts() {
 	//wp_enqueue_script( 'Scroll_GSAP','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', array(jquery), '3.1.1', false );
 	
 	wp_enqueue_script( 'Gsap_js', get_template_directory_uri() . '/js/gsap.min.js', array( jquery ), '1.0', true);
-	wp_enqueue_script( 'stick', get_template_directory_uri() . '/js/slick.min.js', array( jquery ), '1.0', true);
+	//wp_enqueue_script( 'stick', get_template_directory_uri() . '/js/slick.min.js', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'SmoothScroll', get_template_directory_uri() . '/js/SmoothScroll.js', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'barba', 'https://unpkg.com/@barba/core', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'aos', 'https://unpkg.com/aos@next/dist/aos.js', array( jquery ), '1.0', true);
-	wp_enqueue_script( 'barba', get_template_directory_uri() . '/js/barba.min.js', array( jquery ), '1.0', true);
-	wp_enqueue_script( 'aos', get_template_directory_uri() . '/js/aos.min.js', array( jquery ), '1.0', true);
+	//wp_enqueue_script( 'barba', get_template_directory_uri() . '/js/barba.min.js', array( jquery ), '1.0', true);
+	//wp_enqueue_script( 'aos', get_template_directory_uri() . '/js/aos.min.js', array( jquery ), '1.0', true);
 	
 	//wp_enqueue_script( 'TweenMax','https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', array(jquery), '2.1.3', false );
 	
@@ -113,7 +113,8 @@ function custom_scripts() {
    // wp_localize_script( 'ajax-script', 'my_ajax_object',array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 	wp_enqueue_style( 'style-name', get_stylesheet_uri(),'2.0', true);
-	wp_enqueue_style( 'aos', get_template_directory_uri().'/css/aos.css','2.0', true);
+	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css','1.0', true);
+	//wp_enqueue_style( 'aos', get_template_directory_uri().'/css/aos.css','2.0', true);
 	//wp_enqueue_style( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', true);
 	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(jquery), '1.1.0', true );
 	

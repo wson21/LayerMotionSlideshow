@@ -5,13 +5,21 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-    <section>slideshow</section>
+    <section class="slideshow">
+        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow.jpg" class="img-fluid picture">
+        
+    </section>
 
-    <div class="">
-        <h1>h1 SIMFUR</h1>
-        <h2>h2 SIMFUR</h2>
-        <h3>h3 SIMFUR</h3>
-    </div>
+    <section class="about_simfur">
+        <div class="about_simfur_left">
+            <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
+            <div class="img_shadow"></div>
+        </div>
+        <div class="about_simfur_right">
+        More than Furniture,
+        We Build Dreams.
+        </div>
+    </section>
 
 </div>
 
