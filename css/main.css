@@ -1,3 +1,26 @@
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #EF4B46;
+}
+
+h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn {
+  padding-top: 50px;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -20,7 +43,7 @@
   display: flex;
   width: 100vw;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 .about_simfur_left {
@@ -28,7 +51,6 @@
       -ms-flex: 1;
           flex: 1;
   text-align: right;
-  padding-right: 20px;
   position: relative;
 }
 
@@ -36,21 +58,40 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about_simfur_right_content {
+  width: 70%;
+}
+
+.about_simfur_right_content p {
+  padding-top: 50px;
+  text-align: justify;
+  line-height: 28px;
 }
 
 .about_simfur .picture {
   position: absolute;
   top: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 .about_simfur .img_shadow {
-  background-color: cornflowerblue;
-  height: 300px;
-  width: 300px;
-  z-index: 1;
+  background-color: #ebebeb;
+  height: 860px;
+  width: 680px;
+  z-index: -1;
   position: absolute;
-  top: 0;
+  top: 100px;
+  right: 100px;
 }
 /*# sourceMappingURL=main.css.map */

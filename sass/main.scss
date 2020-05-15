@@ -1,3 +1,32 @@
+@import "_mixins";
+@import "_variables";
+
+// General setting //
+
+h1{
+    font-size:60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $red;
+}
+
+h2{
+    font-size:48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h3{
+    font-size:30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn{
+    padding-top: 50px;
+}
+
+// index page //
 .img-fluid{
     max-width:100%;
     height:auto;
@@ -19,32 +48,47 @@
     display: flex;
     width:100vw;
     padding-top:100px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 
     &_left{
         flex:1;
         text-align: right;
-        padding-right: 20px;
         position: relative;
+        // background:rgb(210, 247, 248);
     }
 
     &_right{
         flex:1;
-        padding-left:20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background:rgb(240, 247, 217);
+
+        &_content{
+            width:70%;
+
+            p{
+                padding-top: 50px;
+                text-align: justify;
+                line-height: 28px;
+            }
+             
+        }
     }
 
     .picture{
         position:absolute;
         top:0;
-        z-index: -1;
+        z-index: 1;
     }
 
     .img_shadow{
-        background-color: cornflowerblue;
-        height:300px;
-        width: 300px;
-        z-index: 1;
+        background-color: rgb(235, 235, 235);
+        height:860px;
+        width:680px;
+        z-index: -1;
         position: absolute;
-        top: 0;
+        top:100px;
+        right:100px;
     }
 }
