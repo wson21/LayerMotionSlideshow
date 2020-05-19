@@ -2,7 +2,6 @@ h1 {
   font-size: 60px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #EF4B46;
 }
 
 h2 {
@@ -93,5 +92,38 @@ h3 {
   position: absolute;
   top: 100px;
   right: 100px;
+}
+
+.whatwedo__icon {
+  background: cornsilk;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.whatwedo__icon .icon {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.whatwedo__icon .icon_size {
+  width: 100px;
+}
+
+.philosophy {
+  background: red;
+}
+
+.philosophy .icon_size {
+  width: 100px;
 }
 /*# sourceMappingURL=main.css.map */
