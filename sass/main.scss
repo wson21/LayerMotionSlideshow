@@ -113,8 +113,18 @@ h3 {
 }
 
 .philosophy{
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: red;
+
+    .box{
+        background: cornsilk;
+        flex-basis: 20%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
 
     .icon_size{
         width: 100px;

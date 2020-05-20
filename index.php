@@ -71,20 +71,20 @@
 
     <section class="philosophy">
  
-            <div>
+            <div class="box">
                 <img src="<?php echo get_template_directory_uri() ?>/images/quality.svg" class="icon_size">
                 <h3>QUALITY</h3>
                 is our first priority.
             </div>
 
-            <div>
+            <div class="box">
             <img src="<?php echo get_template_directory_uri() ?>/images/design.svg" class="icon_size">
                 <h3>DESIGN</h3>
-                is based on originality,
+                is based on originality,<br/>
                 aesthetics and functionality.
             </div>
 
-            <div>
+            <div class="box">
             <img src="<?php echo get_template_directory_uri() ?>/images/price.svg" class="icon_size">
                 <h3>PRICE</h3>
                 is always competitive.
