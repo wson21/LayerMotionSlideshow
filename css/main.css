@@ -16,6 +16,19 @@ h3 {
   letter-spacing: 2px;
 }
 
+h4 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h5 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
 .btn {
   padding-top: 50px;
 }
@@ -23,6 +36,10 @@ h3 {
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.text_center {
+  text-align: center;
 }
 
 .slideshow {
@@ -94,8 +111,38 @@ h3 {
   right: 100px;
 }
 
+.what__we__do {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.what__we__do .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.what__we__do .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.what__we__do .wrap {
+  width: 70%;
+}
+
 .whatwedo__icon {
-  background: cornsilk;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,7 +166,42 @@ h3 {
   width: 100px;
 }
 
-.philosophy {
+.projects {
+  background: cornsilk;
+  height: 300px;
+}
+
+.philosophy h3 {
+  text-align: center;
+}
+
+.philosophy .box_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.box .icon_size {
+  width: 80px;
+}
+
+.contact {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,19 +211,55 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: red;
+  background-image: url(../images/cotact_bg.jpg);
+  color: white;
 }
 
-.philosophy .box {
-  background: cornsilk;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
+.contact .contact_wrap {
+  width: 70%;
 }
 
-.philosophy .icon_size {
-  width: 100px;
+.contact .contact_wrap h3 {
+  padding-bottom: 10px;
+}
+
+.contact .contact_wrap p {
+  padding-bottom: 35px;
+}
+
+.container {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container .enquiry {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.container .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 50px;
 }
 /*# sourceMappingURL=main.css.map */

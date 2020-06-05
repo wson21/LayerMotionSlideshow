@@ -1,35 +1,10 @@
 @import 'mixins';
 @import 'variables';
+@import 'base';
+@import 'include-media';
+//    @include media(">phone", "<tablet") {
+//}
 
-// General setting //
-
-h1 {
-    font-size: 60px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-h2 {
-    font-size: 48px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-h3 {
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.btn {
-    padding-top: 50px;
-}
-
-// index page //
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
 
 .slideshow {
     background-color: aqua;
@@ -92,9 +67,27 @@ h3 {
     }
 }
 
+.what__we__do{
+    display: flex;
+
+    .left{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right{
+        flex: 1;
+    }
+
+    .wrap{
+        width: 70%;
+    }
+}
+
 
 .whatwedo__icon{
-    background: cornsilk;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,21 +105,81 @@ h3 {
 
 }
 
+
+.projects{
+    background:cornsilk;
+    height: 300px;
+}
+
 .philosophy{
+    
+    h3{
+        text-align:center;
+    }
+
+    .box_wrap{
+        display: flex;
+        width:100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.box{
+    flex-basis: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    .icon_size{
+        width: 80px;
+    }
+}
+
+.contact{
+    height:100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: red;
+    background-image: url(../images/cotact_bg.jpg);
+    color: white;
 
-    .box{
-        background: cornsilk;
-        flex-basis: 20%;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        text-align: center;
-    }
+    .contact_wrap{
+        width:70%;
+        
+        h3{
+            padding-bottom: 10px;
+        }
 
-    .icon_size{
-        width: 100px;
+        p{
+            padding-bottom: 35px;
+        }
     }
 }
+
+
+.container{
+    width:100%;
+    background:rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction:row;
+
+    @include media(">phone", "<tablet") {
+        flex-direction:column;
+    }
+
+    .enquiry{
+        flex: 1;
+        padding:50px;
+        background:rgba(0, 0, 0, 0.3);
+    }
+
+    .info{
+        flex: 1;
+        padding:50px;
+    }
+}
+
+
+
+
