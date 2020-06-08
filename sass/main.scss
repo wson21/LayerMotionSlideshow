@@ -3,6 +3,8 @@
 @import 'base';
 @import 'include-media';
 @import 'about';
+@import 'slick';
+@import 'single';
 //    @include media(">phone", "<tablet") {
 //}
 
@@ -80,7 +82,6 @@
 
     .wrap{
         width: 70%;
-        background-color: yellowgreen;
     }
 }
 
