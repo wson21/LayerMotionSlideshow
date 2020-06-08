@@ -1,0 +1,83 @@
+.contain_inner{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex-direction:row;
+
+    @include media(">phone", "<tablet") {
+        flex-direction:column;
+    }
+    
+    .content_left_img{
+        flex: 1;
+        text-align: right;
+        position: relative;
+    }
+
+    .content_right_img{
+        flex:1;
+        position: relative;
+    }
+
+    .content_left_txt, .content_right_txt{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media(">phone", "<tablet") {
+            padding-top:50px;
+        }
+
+    }
+
+    .txt_wrap{
+        width:70%;
+        p{
+            text-align: justify;
+            padding-top:10px;
+            padding-bottom:10px;
+        }
+    }
+
+    .pic_shadow_left{
+        background-color: rgb(235, 235, 235);
+        height: 860px;
+        width: 680px;
+        z-index: -1;
+        position: absolute;
+        top: 100px;
+        right: 100px;
+
+        @include media(">phone", "<tablet") {
+            display: none;
+        }
+
+    }
+
+    .pic_shadow_right{
+        background-color: rgb(235, 235, 235);
+        height: 860px;
+        width: 680px;
+        z-index: -1;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+
+        @include media(">phone", "<tablet") {
+            display: none;
+        }
+
+    }
+
+}
+
+.reverse{
+    flex-direction:row;
+
+    @include media(">phone", "<tablet") {
+        flex-direction: column-reverse;
+    }
+
+}

@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'base';
 @import 'include-media';
+@import 'about';
 //    @include media(">phone", "<tablet") {
 //}
 
@@ -31,6 +32,16 @@
         // background:rgb(210, 247, 248);
     }
 
+    .img_shadow {
+        background-color: rgb(235, 235, 235);
+        height: 860px;
+        width: 680px;
+        z-index: -1;
+        position: absolute;
+        top: 100px;
+        right: 100px;
+    }
+
     &_right {
         flex: 1;
         display: flex;
@@ -50,21 +61,7 @@
         }
     }
 
-    .picture {
-        position: absolute;
-        top: 0;
-        z-index: 1;
-    }
 
-    .img_shadow {
-        background-color: rgb(235, 235, 235);
-        height: 860px;
-        width: 680px;
-        z-index: -1;
-        position: absolute;
-        top: 100px;
-        right: 100px;
-    }
 }
 
 .what__we__do{
@@ -83,6 +80,7 @@
 
     .wrap{
         width: 70%;
+        background-color: yellowgreen;
     }
 }
 
@@ -112,6 +110,7 @@
 }
 
 .philosophy{
+    padding-top:100px;
     
     h3{
         text-align:center;

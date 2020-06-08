@@ -42,6 +42,124 @@ h5 {
   text-align: center;
 }
 
+.contain_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .contain_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.contain_inner .content_left_img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  position: relative;
+}
+
+.contain_inner .content_right_img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.contain_inner .content_left_txt, .contain_inner .content_right_txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .contain_inner .content_left_txt, .contain_inner .content_right_txt {
+    padding-top: 50px;
+  }
+}
+
+.contain_inner .txt_wrap {
+  width: 70%;
+}
+
+.contain_inner .txt_wrap p {
+  text-align: justify;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contain_inner .pic_shadow_left {
+  background-color: #ebebeb;
+  height: 860px;
+  width: 680px;
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .contain_inner .pic_shadow_left {
+    display: none;
+  }
+}
+
+.contain_inner .pic_shadow_right {
+  background-color: #ebebeb;
+  height: 860px;
+  width: 680px;
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .contain_inner .pic_shadow_right {
+    display: none;
+  }
+}
+
+.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .slideshow {
   background-color: aqua;
   width: 100vw;
@@ -70,6 +188,16 @@ h5 {
   position: relative;
 }
 
+.about_simfur .img_shadow {
+  background-color: #ebebeb;
+  height: 860px;
+  width: 680px;
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+}
+
 .about_simfur_right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -93,22 +221,6 @@ h5 {
   padding-top: 50px;
   text-align: justify;
   line-height: 28px;
-}
-
-.about_simfur .picture {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-
-.about_simfur .img_shadow {
-  background-color: #ebebeb;
-  height: 860px;
-  width: 680px;
-  z-index: -1;
-  position: absolute;
-  top: 100px;
-  right: 100px;
 }
 
 .what__we__do {
@@ -140,6 +252,7 @@ h5 {
 
 .what__we__do .wrap {
   width: 70%;
+  background-color: yellowgreen;
 }
 
 .whatwedo__icon {
@@ -169,6 +282,10 @@ h5 {
 .projects {
   background: cornsilk;
   height: 300px;
+}
+
+.philosophy {
+  padding-top: 100px;
 }
 
 .philosophy h3 {
