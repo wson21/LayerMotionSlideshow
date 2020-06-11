@@ -366,8 +366,10 @@ h5 {
   overflow: hidden;
 }
 
-.slideshow__item {
-  background: coral;
+@media (min-width: 321px) and (max-width: 767px) {
+  .slideshow {
+    height: 70vh;
+  }
 }
 
 .about_simfur {
@@ -463,6 +465,8 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .whatwedo__icon .icon {
@@ -484,6 +488,7 @@ h5 {
 
 .philosophy {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .philosophy h3 {
@@ -528,6 +533,14 @@ h5 {
           justify-content: center;
   background-image: url(../images/cotact_bg.jpg);
   color: white;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .contact {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .contact .contact_wrap {
