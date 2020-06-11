@@ -31,11 +31,19 @@
 <section class="header">
     
     <div class="logo">
-        <img src="<?php echo get_template_directory_uri() ?>/images/simfur.svg" class="img-fluid">
+        <div class="size"><img src="<?php echo get_template_directory_uri() ?>/images/simfur.svg" class="img-fluid"></div>
     </div>
 
     <div class="nav">
-        menu
+        
+        <ul>
+            <li><a href="<?php echo site_url(); ?>">Home</a></li>
+            <li><a href="<?php echo site_url(); ?>/about/">About</a></li>
+            <li><a href="<?php echo site_url(); ?>/services/">Services</a></li>
+            <li><a href="<?php echo site_url(); ?>/projects">Projects</a></li>
+            <li><a href="<?php echo site_url(); ?>/contact/">Contact</a></li>
+        </ul>
+
     </div>
 
 

@@ -5,10 +5,15 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-    <section class="slideshow">
-        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow.jpg" class="img-fluid picture">
-
-        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow.jpg" class="img-fluid picture">
+    <section class="slider-wrapper">
+    <div class="slider">
+        <div>
+        <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
+        </div>
+        <div>
+        <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
+        </div>
+    </div>
     </section>
 
     <section class="contain_inner">

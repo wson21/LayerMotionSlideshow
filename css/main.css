@@ -47,28 +47,35 @@ h5 {
 }
 
 .header {
-  background: rgba(0, 0, 0, 0.2);
   position: fixed;
-  color: white;
+  color: black;
   z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
-.header .logo {
+.logo {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  width: 180px;
   padding-left: 30px;
   padding-top: 30px;
 }
 
-.header .nav {
+.logo .size {
+  width: 120px;
+}
+
+.nav {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.nav li {
+  display: inline-block;
 }
 
 input[type="text"],
