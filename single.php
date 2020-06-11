@@ -5,7 +5,7 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-<!-- <section class="slider-wrapper">
+<section class="slider-wrapper">
   <div class="slider">
     <div>
     <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
@@ -14,7 +14,7 @@
     <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
     </div>
   </div>
-</section> -->
+</section>
 
 <section class="project_info_wrap">
     <div class="inner">

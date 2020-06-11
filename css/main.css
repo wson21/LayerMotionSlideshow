@@ -71,6 +71,97 @@ h5 {
           flex: 1;
 }
 
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="file"] {
+  padding: 8px 0px;
+  margin: 0px;
+  background: none;
+  border: none;
+  color: rgba(216, 216, 216, 0.9);
+  border-bottom: 1px solid #373737;
+  font-weight: lighter;
+  width: 100%;
+  font-size: 16px;
+  font-family: "gill_sans_lightregular";
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 1px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background: #1e1e1e;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  width: 100%;
+  color: rgba(216, 216, 216, 0.9);
+  padding: 20px 0px;
+}
+
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  border: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  /*background: rgba(20,20,20,1.00);*/
+  border-bottom: 1px solid rgba(216, 216, 216, 0.5);
+  outline: none;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: #141414;
+}
+
+textarea::-webkit-scrollbar {
+  width: 10px;
+  background-color: #141414;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 0px solid #555555;
+}
+
+input:-webkit-autofill {
+  background-color: red !important;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing,
+div.wpcf7-mail-sent-ng {
+  border: 0px solid;
+  color: #3ba0ff;
+  width: 100%;
+  text-align: center;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+span.wpcf7-not-valid-tip {
+  color: #3ba0ff;
+  display: block;
+  padding-top: 10px;
+}
+
+.wpcf7-mail-sent-ok {
+  border: 0px solid #398f14;
+  text-align: center;
+  color: #398f14;
+  padding-bottom: 30px;
+}
+
 .contain_inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,89 +461,6 @@ h5 {
   .slideshow {
     height: 70vh;
   }
-}
-
-.about_simfur {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
-  padding-top: 100px;
-  padding-bottom: 200px;
-}
-
-.about_simfur_left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-align: right;
-  position: relative;
-}
-
-.about_simfur .img_shadow {
-  background-color: #ebebeb;
-  height: 860px;
-  width: 680px;
-  z-index: -1;
-  position: absolute;
-  top: 100px;
-  right: 100px;
-}
-
-.about_simfur_right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.about_simfur_right_content {
-  width: 70%;
-}
-
-.about_simfur_right_content p {
-  padding-top: 50px;
-  text-align: justify;
-  line-height: 28px;
-}
-
-.what__we__do {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.what__we__do .left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.what__we__do .right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.what__we__do .wrap {
-  width: 70%;
 }
 
 .whatwedo__icon {
