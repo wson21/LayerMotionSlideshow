@@ -7,12 +7,29 @@
 
     <section class="slider-wrapper">
     <div class="slider">
-        <div>
-        <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
+
+        <div class="item">
+            <a href="<?php echo site_url(); ?>/projects/skycube/"> 
+            <h2>skycube residence</h2>
+            </a>
+            <img src="<?php echo get_template_directory_uri() ?>/images/skycube_3.jpg" class="img-fluid">
         </div>
-        <div>
-        <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
+
+        <div class="item">
+            <h2>Tropics Eight</h2>
+        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow1.jpg" class="img-fluid">
         </div>
+
+        <div class="item">
+            <h2>Tanjung Point Residences</h2>
+        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow2.jpg" class="img-fluid">
+        </div>
+
+        <div class="item">
+            <h2>The Landmark</h2>
+        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow3.jpg" class="img-fluid">
+        </div>
+        
     </div>
     </section>
 
@@ -24,10 +41,10 @@
         <div class="content_right_txt">
 
             <div class="txt_wrap">
-                <h1>
+                <h2>
                     More than Furniture,<br>
                     We Build Dreams.
-                </h1>
+                </h2>
                 <p>Founded in the 1980s in Penang, Malaysia under the name Sim Furnishing, we started from a humble beginning providing custom-made wooden furniture for private oresidences and small-time commercial clients. Over the years, our commitment to original craftsmanship, quality materials and workmanship has propelled us by leaps and bounds and enabled us to explore the many facets of interior design, construction and project management. In 2005, our business model was revamped as a total solution provider when the company was incorporated as Simfur Design Sdn. Bhd.</p>
         
                 <p>Today, even as we grow in size and scope, our dedication remains true to creating bespoke furniture at a reasonable price. We believe that the best design is a perfect balance between aesthetics and functionality and one that tells the personal story of each client with class and clarity.</p>
@@ -109,61 +126,9 @@
 
     </section>
 
-    <section class="contact">
 
-<div class="contact_wrap">
-
-<h3 class="text_center">start a project now</h3>
-
-<p class="text_center">We always welcome new opportunities, whether large, small or artisanal.</p>
-
-
-    <div class="container">
-        
-        <div class="left enquiry">
-            <div style="height:500px;">
-            <?php echo do_shortcode( '[contact-form-7 id="1234" title="Contact form 1"]' ); ?>
-            </div>
-        </div>
-        
-        <div class="right info">
-        <h4>​​Simfur Design Sdn Bhd</h4><br><br>
-
-        <h5>SHOWROOM</h5><br>
-
-        Unit 6-6, The CEO, Lebuh Nipah 5,<br>
-
-        Bayan Lepas 11900 Penang.<br><br>
-
-        T  604 - 637 1177<br><br>
-
-        <h5>PRODUCTION OFFICE</h5><br>
-
-        309-G MK 12, Sungai Tiram,<br>
-
-        Bayan Lepas 11900 Penang.<br><br>
-
-        T 604 - 643 4069<br>
-        T 604 - 641 3188<br>
-        F 604 - 643 5051<br>
-        M 6017 - 467 9333<br><br>
-
-        E sales@simfur.com<br><br>
-
-        <h5>Follow US</h5><br>
-            <ul>
-                <li>facebook</li>
-                <li>instagram</li>
-                <li>pinterest</li>
-            </ul>
-
-        </div>
-    </div>
 </div>
 
-</section>
-
-
-</d>
+<?php include('libs/contact.php') ?>
 
 <?php include('footer.php'); ?>

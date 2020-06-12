@@ -1,8 +1,8 @@
 .contain_inner{
     display: flex;
     justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     flex-direction:row;
 
     @include media(">phone", "<tablet") {
@@ -33,7 +33,7 @@
     }
 
     .txt_wrap{
-        width:70%;
+        width:62%;
         p{
             text-align: justify;
             padding-top:10px;

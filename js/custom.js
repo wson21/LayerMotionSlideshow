@@ -43,6 +43,14 @@ jQuery(document).ready(function ($) {
 
   }
 
+  // $('#nav-icon4').click(function(){
+	// 	$(this).toggleClass('open');
+	// });
+
+  $('#nav-icon4').click(function() {
+    $(this).toggleClass('open');
+    $('#overlay').toggleClass('open');
+   });
 
 var $slider = $('.slider');
 

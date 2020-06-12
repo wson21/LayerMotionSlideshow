@@ -31,20 +31,46 @@
 <section class="header">
     
     <div class="logo">
-        <div class="size"><img src="<?php echo get_template_directory_uri() ?>/images/simfur.svg" class="img-fluid"></div>
+        <div class="size">
+        <a href="<?php echo site_url(); ?>">
+            <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" class="img-fluid"></a>
+        </div>
     </div>
 
-    <div class="nav">
+    <div class="nav_icon">
         
-        <ul>
+        <!-- <ul>
             <li><a href="<?php echo site_url(); ?>">Home</a></li>
             <li><a href="<?php echo site_url(); ?>/about/">About</a></li>
             <li><a href="<?php echo site_url(); ?>/services/">Services</a></li>
             <li><a href="<?php echo site_url(); ?>/projects">Projects</a></li>
             <li><a href="<?php echo site_url(); ?>/contact/">Contact</a></li>
-        </ul>
+        </ul> -->
+
+        <!-- <ul>
+            <li id="toggle">MENU</li>
+        </ul> -->
+        
+        <div id="nav-icon4">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
     </div>
 
 
 </section>
+
+<div class="overlay" id="overlay">
+  <nav class="overlay-menu">
+    <ul>
+        <li><a href="<?php echo site_url(); ?>">Home</a></li>
+        <li><a href="<?php echo site_url(); ?>/about/">About</a></li>
+        <li><a href="<?php echo site_url(); ?>/services/">Services</a></li>
+        <li><a href="<?php echo site_url(); ?>/projects">Projects</a></li>
+        <li><a href="<?php echo site_url(); ?>/contact/">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+

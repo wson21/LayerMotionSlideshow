@@ -43,20 +43,3 @@ html, body {
 .disable_scroll {
   overflow: hidden;
 }
-
-body {
-  font-size: 18px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  background: rgb(252, 252, 252);
-  color: black;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2 ,h3{
-    /* font-family: 'Cabin', sans-serif;
-    font-weight: 400; */
-}

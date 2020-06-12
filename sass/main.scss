@@ -1,7 +1,7 @@
+@import 'include-media';
 @import 'mixins';
 @import 'variables';
 @import 'base';
-@import 'include-media';
 @import 'about';
 @import 'slick';
 @import 'single';
@@ -9,15 +9,34 @@
 //}
 
 
-.slideshow {
-    background-color: aqua;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+.slider-wrapper{
+    
+}
 
-    @include media(">phone", "<tablet") {
-        height:70vh;
+
+.slider{
+
+    h2{
+        position: absolute;
+        right:5%;
+        top:80%;
+        color: white;
+        z-index:3;
     }
+
+    h2:after{
+        width:150px;
+        height:40px;
+        background: rgba(250, 240, 220,  0.5);
+        content:'';
+        margin-top:30px;
+        position: absolute;
+        right:-20px;
+        z-index:-1;
+        top:-10px;
+    }
+
+
 
 
 }
@@ -30,6 +49,13 @@
     justify-content: center;
     padding-top:100px;
     padding-bottom:100px;
+    flex-direction: row;
+
+    @include media(">phone", "<tablet") {
+        flex-direction: column;
+        padding-top:0px;
+        padding-bottom:0px;
+    }
 
     .icon{
         flex-basis: 20%;
@@ -44,15 +70,14 @@
 
 }
 
-
 .projects{
-    background:cornsilk;
     height: 300px;
 }
 
 .philosophy{
-    padding-top:100px;
-    padding-bottom:100px;
+    padding-top:150px;
+    padding-bottom:150px;
+    
     h3{
         text-align:center;
     }
@@ -70,6 +95,12 @@
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
+    flex-direction:row;
+
+    @include media(">phone", "<tablet") {
+        flex-direction:column;
+    }
+
 
     .icon_size{
         width: 80px;
@@ -130,4 +161,80 @@
 }
 
 
+.group_photo{
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+.projects_page{
+
+    img{
+        width:70%;
+
+        @include media(">phone", "<tablet") {
+            width:100%;
+        }
+
+    }
+
+    .content_right_txt{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media(">phone", "<tablet") {
+            padding-top:50px;
+            text-align:center;
+        }
+
+    }
+
+    .content_left_txt{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: right;
+
+        @include media(">phone", "<tablet") {
+            padding-top:50px;
+            text-align:center;
+        }
+
+    }
+
+    .pic_shadow_left{
+        background-color: rgb(235, 235, 235);
+        height: 480px;
+        width: 680px;
+        z-index: -1;
+        position: absolute;
+        top: 100px;
+        right: 100px;
+
+        @include media(">phone", "<tablet") {
+            display: none;
+        }
+
+    }
+
+    .pic_shadow_right{
+        background-color: rgb(235, 235, 235);
+        height: 480px;
+        width: 680px;
+        z-index: -1;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+
+        @include media(">phone", "<tablet") {
+            display: none;
+        }
+
+    }
+
+}
 
