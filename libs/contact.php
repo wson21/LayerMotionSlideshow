@@ -1,4 +1,4 @@
-<section class="contact">
+<section class="contact" data-midnight="white">
 
     <div class="contact_wrap">
 

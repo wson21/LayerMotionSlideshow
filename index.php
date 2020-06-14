@@ -5,33 +5,30 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-    <section class="slider-wrapper">
-    <div class="slider">
-
-        <div class="item">
-            <a href="<?php echo site_url(); ?>/projects/skycube/"> 
-            <h2>skycube residence</h2>
-            </a>
-            <img src="<?php echo get_template_directory_uri() ?>/images/skycube_3.jpg" class="img-fluid">
+  <div class="slider stick-dots" data-midnight="white">
+    <div class="slide">
+      <div class="slide__img">
+        <img src="" alt="" data-lazy="http://alexandrebuffet.fr/codepen/images/full/nature_01.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+      <div class="slide__content">
+        <div class="slide__content--headings">
+           <h2 class="animated" data-animation-in="fadeInUp">Slide me to the moon</h2>
+           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.3">With awesome animations</p>
         </div>
-
-        <div class="item">
-            <h2>Tropics Eight</h2>
-        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow1.jpg" class="img-fluid">
-        </div>
-
-        <div class="item">
-            <h2>Tanjung Point Residences</h2>
-        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow2.jpg" class="img-fluid">
-        </div>
-
-        <div class="item">
-            <h2>The Landmark</h2>
-        <img src="<?php echo get_template_directory_uri() ?>/images/slideshow3.jpg" class="img-fluid">
-        </div>
-        
+      </div>
     </div>
-    </section>
+    <div class="slide">
+      <div class="slide__img">
+        <img src="" alt="" data-lazy="http://alexandrebuffet.fr/codepen/images/full/nature_02.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+      <div class="slide__content">
+        <div class="slide__content--headings">
+           <h2 class="animated" data-animation-in="fadeInRight">Slide me to the moon</h2>
+           <p class="animated" data-animation-in="fadeInRight" data-delay-in="0.2">With awesome animations</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <section class="contain_inner">
         <div class="content_left_img">

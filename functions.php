@@ -68,6 +68,7 @@ function custom_scripts() {
 	//wp_enqueue_script( 'Scroll_GSAP','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', array(jquery), '3.1.1', false );
 	
 	wp_enqueue_script( 'Gsap_js', get_template_directory_uri() . '/js/gsap.min.js', array( jquery ), '3.2.4', true);
+	wp_enqueue_script( 'midnight', get_template_directory_uri() . '/js/midnight.jquery.min.js', array( jquery ), '3.2.4', true);
 	//wp_enqueue_script( 'stick', get_template_directory_uri() . '/js/slick.min.js', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'SmoothScroll', get_template_directory_uri() . '/js/SmoothScroll.js', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'barba', 'https://unpkg.com/@barba/core', array( jquery ), '1.0', true);
