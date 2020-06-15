@@ -5,26 +5,26 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-  <div class="slider stick-dots" data-midnight="white">
+<div class="slider stick-dots">
     <div class="slide">
       <div class="slide__img">
-        <img src="" alt="" data-lazy="http://alexandrebuffet.fr/codepen/images/full/nature_01.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow1.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
       </div>
       <div class="slide__content">
         <div class="slide__content--headings">
-           <h2 class="animated" data-animation-in="fadeInUp">Slide me to the moon</h2>
-           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.3">With awesome animations</p>
+           <h2 class="animated" data-animation-in="fadeInUp">tropics eight</h2>
+           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
         </div>
       </div>
     </div>
     <div class="slide">
       <div class="slide__img">
-        <img src="" alt="" data-lazy="http://alexandrebuffet.fr/codepen/images/full/nature_02.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow2.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
       </div>
       <div class="slide__content">
         <div class="slide__content--headings">
-           <h2 class="animated" data-animation-in="fadeInRight">Slide me to the moon</h2>
-           <p class="animated" data-animation-in="fadeInRight" data-delay-in="0.2">With awesome animations</p>
+           <h2 class="animated" data-animation-in="fadeInUp">tanjung point</h2>
+           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
         </div>
       </div>
     </div>
@@ -126,6 +126,6 @@
 
 </div>
 
-<?php include('libs/contact.php') ?>
+<!-- <?php include('libs/contact.php') ?> -->
 
 <?php include('footer.php'); ?>

@@ -9,37 +9,19 @@
 //}
 
 
-.slider-wrapper{
-    
-}
+// .slider{
 
-
-.slider{
-
-    h2{
-        position: absolute;
-        right:5%;
-        top:80%;
-        color: white;
-        z-index:3;
-    }
-
-    h2:after{
-        width:150px;
-        height:40px;
-        background: rgba(250, 240, 220,  0.5);
-        content:'';
-        margin-top:30px;
-        position: absolute;
-        right:-20px;
-        z-index:-1;
-        top:-10px;
-    }
-
-
-
-
-}
+//     h2:after{
+//         width:150px;
+//         height:30px;
+//         background: rgba(250, 240, 220,  0.5);
+//         content:'';
+//         margin-top:20px;
+//         position: absolute;
+//         z-index:-1;
+//         right:0%;
+//     }
+// }
 
 
 

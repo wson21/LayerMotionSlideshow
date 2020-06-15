@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
 
+  "use strict";
+
   // $('<div class="welcome"> welcome</div> ').appendTo('body');
   // $('.welcome').css('padding', '50px');
   // $('.box').css('background', 'yellow');
@@ -50,6 +52,7 @@ jQuery(document).ready(function ($) {
   $('#nav-icon4').click(function() {
     $(this).toggleClass('open');
     $('#overlay').toggleClass('open');
+    $('body, html').toggleClass('hide_scroll');
    });
 
 
@@ -57,15 +60,14 @@ jQuery(document).ready(function ($) {
 // Init slick slider + animation
 $('.slider').slick({
   autoplay: true,
-  speed: 800,
-  //lazyLoad: 'progressive',
+  speed: 1200,
   arrows: false,
   dots: true,
-})//.slickAnimation();
+}).slickAnimation();
 
 
 
-$('.logo').midnight();
+ $('.logo').midnight();
 
 
 

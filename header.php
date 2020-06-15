@@ -28,40 +28,35 @@
 
 <body data-barba="wrapper">
 
-<section class="header">
+
+    <div class="logo">
+        <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" class="img-fluid">
+    </div>
+
+
+<!-- <section class="header">
     
     <div class="logo">
-    simfur
-        <!-- <div class="size">
+    logo
+    </div>
+
+
+    <div class="logo">
+       <div class="size">
         <a href="<?php echo site_url(); ?>">
             <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" class="img-fluid"></a>
-        </div> -->
+        </div>
     </div>
 
     <div class="nav_icon">
-        
-        <!-- <ul>
-            <li><a href="<?php echo site_url(); ?>">Home</a></li>
-            <li><a href="<?php echo site_url(); ?>/about/">About</a></li>
-            <li><a href="<?php echo site_url(); ?>/services/">Services</a></li>
-            <li><a href="<?php echo site_url(); ?>/projects">Projects</a></li>
-            <li><a href="<?php echo site_url(); ?>/contact/">Contact</a></li>
-        </ul> -->
-
-        <!-- <ul>
-            <li id="toggle">MENU</li>
-        </ul> -->
-        
         <div id="nav-icon4">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
     </div>
 
-
-</section>
+</section> -->
 
 <div class="overlay" id="overlay">
   <nav class="overlay-menu">
