@@ -60,12 +60,14 @@ jQuery(document).ready(function ($) {
 // Init slick slider + animation
 $('.slider').slick({
   autoplay: true,
-  speed: 1200,
+  speed: 1500,
   arrows: false,
   dots: true,
 }).slickAnimation();
 
-
+$('.slide__img img').resizeToParent({
+  parent: '.slide'
+});
 
  $('.logo').midnight();
 

@@ -2,7 +2,7 @@
 
 
 body {
-  font-size: 18px;
+  font-size: 10px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   background: rgb(252, 252, 252);
@@ -12,9 +12,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @include media(">phone", "<tablet") {
-    font-size: 16px;
+  @include media(">phone") {
+    font-size: 18px;
   }
+
 }
 
 h1 {
@@ -27,16 +28,24 @@ h1 {
       font-size: 30px;
     }
 
+    @include media('>=desktop') {
+      font-size: 60px;
+    }
+
 }
 
 h2 {
-    font-size: 48px;
+    font-size: 26px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
 
     @include media(">phone", "<tablet") {
-      font-size: 20px;
+      font-size: 26px;
+    }
+
+    @include media('>=desktop') {
+      font-size: 48px;
     }
 
 }
@@ -98,11 +107,30 @@ h5 {
 // }
 
 .logo{
-  width:100px;
+  width:80px;
   position: absolute;
   z-index: 999;
-  top:35px;
-  left:35px;
+  margin-left:20px;
+  margin-top:20px;
+
+  // @include media(">phone") {
+  //   width:120px;
+  //   margin-left:35px;
+  //   margin-top:35px;
+  // }
+
+  @include media(">phone", "<tablet") {
+    width:100px;
+    margin-left:30px;
+    margin-top:30px;
+  }
+
+  @include media('>=desktop') {
+    width:120px;
+    margin-left:35px;
+    margin-top:35px;
+  }
+
 }
 
 
@@ -301,6 +329,13 @@ $color-link: rgb(31, 31, 31);
     opacity: 1;
     left: 0;
   }
+}
+
+.nav_icon{
+  position: fixed;
+  top:20px;
+  z-index:9999;
+  right:35px;;
 }
 
 #nav-icon4 {

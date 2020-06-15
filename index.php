@@ -28,6 +28,17 @@
         </div>
       </div>
     </div>
+    <div class="slide">
+      <div class="slide__img">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow3.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+      <div class="slide__content">
+        <div class="slide__content--headings">
+           <h2 class="animated" data-animation-in="fadeInUp">Landmark</h2>
+           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
+        </div>
+      </div>
+    </div>
   </div>
 
     <section class="contain_inner">

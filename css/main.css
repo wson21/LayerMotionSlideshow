@@ -1,5 +1,5 @@
 body {
-  font-size: 18px;
+  font-size: 10px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   background: #fcfcfc;
@@ -11,9 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 321px) and (max-width: 767px) {
+@media (min-width: 321px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -30,8 +30,14 @@ h1 {
   }
 }
 
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
 h2 {
-  font-size: 48px;
+  font-size: 26px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -39,7 +45,13 @@ h2 {
 
 @media (min-width: 321px) and (max-width: 767px) {
   h2 {
-    font-size: 20px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 48px;
   }
 }
 
@@ -94,11 +106,27 @@ h5 {
 }
 
 .logo {
-  width: 100px;
+  width: 80px;
   position: absolute;
   z-index: 999;
-  top: 35px;
-  left: 35px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .logo {
+    width: 100px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    width: 120px;
+    margin-left: 35px;
+    margin-top: 35px;
+  }
 }
 
 input[type="text"],
@@ -313,6 +341,13 @@ span.wpcf7-not-valid-tip {
   }
 }
 
+.nav_icon {
+  position: fixed;
+  top: 20px;
+  z-index: 9999;
+  right: 35px;
+}
+
 #nav-icon4 {
   width: 50px;
   height: 10px;
@@ -512,10 +547,8 @@ span.wpcf7-not-valid-tip {
   }
 }
 
-@media (min-width: 992px) {
-  .slider, .slide {
-    height: 100vh;
-  }
+.slider, .slide {
+  height: 100vh;
 }
 
 .slide {
@@ -523,23 +556,12 @@ span.wpcf7-not-valid-tip {
 }
 
 .slide .slide__img {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-@media (min-width: 992px) {
-  .slide .slide__img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-}
-
 .slide .slide__img img {
-  height: 100%;
   opacity: 1 !important;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
@@ -547,37 +569,53 @@ span.wpcf7-not-valid-tip {
   transition: all 1s ease;
 }
 
+.slide .slide__content {
+  width: auto;
+  position: absolute;
+  bottom: 10%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  text-align: center;
+  text-shadow: 2px 1px 5px rgba(150, 150, 150, 0.64);
+}
+
 @media (min-width: 992px) {
-  .slide .slide__img img {
-    max-width: 100%;
-    height: auto;
+  .slide .slide__content {
+    bottom: 10%;
+    right: 5%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    text-align: right;
   }
 }
 
-.slide .slide__content {
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-}
-
 .slide .slide__content--headings {
-  text-align: right;
   color: #FFF;
 }
 
-.slide .slide__content--headings h2 {
-  margin: 10px 0;
-}
-
 .slide .slide__content--headings h2:after {
-  width: 150px;
-  height: 30px;
+  width: 80px;
+  height: 0px;
   background: rgba(250, 240, 220, 0.5);
   content: '';
-  margin-top: 20px;
+  margin-top: 10px;
   position: absolute;
   z-index: -1;
   right: 0%;
+}
+
+@media (min-width: 992px) {
+  .slide .slide__content--headings h2:after {
+    width: 150px;
+    height: 30px;
+    background: rgba(251, 233, 194, 0.8);
+    content: '';
+    margin-top: 20px;
+    position: absolute;
+    z-index: -1;
+    right: 0%;
+  }
 }
 
 .slide .slide__content--headings .animated {
@@ -587,6 +625,13 @@ span.wpcf7-not-valid-tip {
 
 .slide .slide__content--headings p {
   text-transform: uppercase;
+  padding-top: 10px;
+}
+
+@media (min-width: 992px) {
+  .slide .slide__content--headings p {
+    padding-top: 5px;
+  }
 }
 
 .slider [data-animation-in] {
@@ -693,8 +738,8 @@ span.wpcf7-not-valid-tip {
             transform: scale3d(1, 1, 1);
   }
   to {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
   }
 }
 @keyframes zoomInImage {
@@ -703,8 +748,8 @@ span.wpcf7-not-valid-tip {
             transform: scale3d(1, 1, 1);
   }
   to {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
   }
 }
 
@@ -715,8 +760,8 @@ span.wpcf7-not-valid-tip {
 
 @-webkit-keyframes zoomOutImage {
   from {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
   }
   to {
     -webkit-transform: scale3d(1, 1, 1);
@@ -726,8 +771,8 @@ span.wpcf7-not-valid-tip {
 
 @keyframes zoomOutImage {
   from {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
   }
   to {
     -webkit-transform: scale3d(1, 1, 1);
