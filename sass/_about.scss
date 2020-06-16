@@ -90,6 +90,11 @@
         position: absolute;
         top: 100px;
         left: 100px;
+        display: none;
+
+        @include media(">phone") {
+            display: block;
+        }
 
         @include media(">phone", "<tablet") {
             display: none;

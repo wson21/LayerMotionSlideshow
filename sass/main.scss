@@ -29,12 +29,14 @@
     justify-content: center;
     padding-top:100px;
     padding-bottom:100px;
-    flex-direction: row;
+    flex-direction: column;
+
+    @include media(">phone") {
+        flex-direction:row;
+    }
 
     @include media(">phone", "<tablet") {
         flex-direction: column;
-        padding-top:0px;
-        padding-bottom:0px;
     }
 
     .icon{
@@ -48,10 +50,6 @@
         width: 100px;
     }
 
-}
-
-.projects{
-    height: 300px;
 }
 
 .philosophy{
@@ -68,11 +66,16 @@
         width:100%;
         align-items: center;
         justify-content: center;
-        flex-direction: row;
+        flex-direction: column;
+
+        @include media(">phone") {
+            flex-direction:row;
+        }
 
         @include media(">phone", "<tablet") {
             flex-direction: column;
         }
+
 
     }
 }
@@ -95,17 +98,37 @@
     justify-content: center;
     background-image: url(../images/cotact_bg.jpg);
     color: white;
-    padding-top:100px;
-    padding-bottom: 100px;
+    padding-top:0px;
+    height:auto;
+
+    @include media(">phone") {
+        height:auto;
+        padding-top:50px;
+    }
 
     @include media(">phone", "<tablet") {
         height:auto;
-        padding-top:100px;
-        padding-bottom: 100px;
+        padding-top:50px;
+    }
+
+    @include media('>=desktop') {
+        height:100vh;
     }
 
     .contact_wrap{
-        width:70%;
+        width:100%;
+
+        @include media(">phone") {
+            width:100%;
+        }
+    
+        @include media(">phone", "<tablet") {
+            width:100%;
+        }
+
+        @include media('>=desktop') {
+            width:70%;
+        }
         
         h3{
             padding-bottom: 10px;
@@ -122,10 +145,14 @@
     width:100%;
     background:rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction:row;
+    flex-direction: column;
+
+    @include media(">phone") {
+        flex-direction:row;
+    }
 
     @include media(">phone", "<tablet") {
-        flex-direction:column;
+        flex-direction: column;
     }
 
     .enquiry{
@@ -143,23 +170,12 @@
 }
 
 
-.group_photo{
-    text-align: center;
-    width: 100%;
-    padding-top: 50px;
-}
-
-
-.projects_page{
-
-    img{
-        width:70%;
-
-        @include media(">phone", "<tablet") {
-            width:100%;
-        }
-
+    .group_photo{
+        text-align: center;
+        width: 100%;
+        padding-top: 50px;
     }
+
 
     .content_right_txt{
         flex: 1;
@@ -218,5 +234,7 @@
 
     }
 
+.projects{
+    background:cadetblue;
 }
 

@@ -133,24 +133,23 @@ input[type="file"] {
   margin: 0px;
   background: none;
   border: none;
-  color: rgba(216, 216, 216, 0.9);
-  border-bottom: 1px solid #373737;
+  color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid white;
   font-weight: lighter;
   width: 100%;
   font-size: 16px;
-  font-family: "gill_sans_lightregular";
   -webkit-font-smoothing: antialiased;
   letter-spacing: 1px;
 }
 
 textarea {
-  resize: vertical;
+  resize: none;
 }
 
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  background: #1e1e1e;
+  background: black;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -170,7 +169,7 @@ input:focus,
 textarea:focus,
 select:focus {
   /*background: rgba(20,20,20,1.00);*/
-  border-bottom: 1px solid rgba(216, 216, 216, 0.5);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.5);
   outline: none;
 }
 
@@ -201,6 +200,7 @@ div.wpcf7-mail-sent-ng {
   text-align: center;
   padding: 0 auto;
   margin: 0 auto;
+  font-weight: 100;
 }
 
 span.wpcf7-not-valid-tip {
@@ -574,6 +574,13 @@ span.wpcf7-not-valid-tip {
   position: absolute;
   top: 100px;
   left: 100px;
+  display: none;
+}
+
+@media (min-width: 321px) {
+  .contain_inner .pic_shadow_right {
+    display: block;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
@@ -893,10 +900,19 @@ span.wpcf7-not-valid-tip {
           justify-content: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 321px) {
+  .whatwedo__icon {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
@@ -905,8 +921,6 @@ span.wpcf7-not-valid-tip {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 }
 
@@ -920,10 +934,6 @@ span.wpcf7-not-valid-tip {
 
 .whatwedo__icon .icon_size {
   width: 100px;
-}
-
-.projects {
-  height: 300px;
 }
 
 .philosophy {
@@ -947,10 +957,19 @@ span.wpcf7-not-valid-tip {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 321px) {
+  .philosophy .box_wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
@@ -990,20 +1009,50 @@ span.wpcf7-not-valid-tip {
           justify-content: center;
   background-image: url(../images/cotact_bg.jpg);
   color: white;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 0px;
+  height: auto;
+}
+
+@media (min-width: 321px) {
+  .contact {
+    height: auto;
+    padding-top: 50px;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
   .contact {
     height: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    height: 100vh;
   }
 }
 
 .contact .contact_wrap {
-  width: 70%;
+  width: 100%;
+}
+
+@media (min-width: 321px) {
+  .contact .contact_wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .contact .contact_wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact .contact_wrap {
+    width: 70%;
+  }
 }
 
 .contact .contact_wrap h3 {
@@ -1020,10 +1069,19 @@ span.wpcf7-not-valid-tip {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 321px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
@@ -1056,17 +1114,7 @@ span.wpcf7-not-valid-tip {
   padding-top: 50px;
 }
 
-.projects_page img {
-  width: 70%;
-}
-
-@media (min-width: 321px) and (max-width: 767px) {
-  .projects_page img {
-    width: 100%;
-  }
-}
-
-.projects_page .content_right_txt {
+.content_right_txt {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1082,13 +1130,13 @@ span.wpcf7-not-valid-tip {
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
-  .projects_page .content_right_txt {
+  .content_right_txt {
     padding-top: 50px;
     text-align: center;
   }
 }
 
-.projects_page .content_left_txt {
+.content_left_txt {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1105,13 +1153,13 @@ span.wpcf7-not-valid-tip {
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
-  .projects_page .content_left_txt {
+  .content_left_txt {
     padding-top: 50px;
     text-align: center;
   }
 }
 
-.projects_page .pic_shadow_left {
+.pic_shadow_left {
   background-color: #ebebeb;
   height: 480px;
   width: 680px;
@@ -1122,12 +1170,12 @@ span.wpcf7-not-valid-tip {
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
-  .projects_page .pic_shadow_left {
+  .pic_shadow_left {
     display: none;
   }
 }
 
-.projects_page .pic_shadow_right {
+.pic_shadow_right {
   background-color: #ebebeb;
   height: 480px;
   width: 680px;
@@ -1138,8 +1186,12 @@ span.wpcf7-not-valid-tip {
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
-  .projects_page .pic_shadow_right {
+  .pic_shadow_right {
     display: none;
   }
+}
+
+.projects {
+  background: cadetblue;
 }
 /*# sourceMappingURL=main.css.map */

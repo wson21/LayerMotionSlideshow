@@ -5,21 +5,25 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-<div class="projects_title"><h2>Skycube Residence</h2></div>
+  <div class="slider stick-dots">
+    <div class="slide">
+      <div class="slide__img">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow1.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
 
-<section class="slider-wrapper">
-  <div class="slider">
-    <div>
-    <img src="<?php echo get_template_directory_uri() ?>/images/skycube_1.jpg" class="img-fluid">
     </div>
-    <div>
-    <img src="<?php echo get_template_directory_uri() ?>/images/skycube_2.jpg" class="img-fluid">
+    <div class="slide">
+      <div class="slide__img">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow2.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+
     </div>
-    <div>
-    <img src="<?php echo get_template_directory_uri() ?>/images/skycube_3.jpg" class="img-fluid">
+    <div class="slide">
+      <div class="slide__img">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow3.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
     </div>
   </div>
-</section>
 
 <section class="project_info_wrap">
 
