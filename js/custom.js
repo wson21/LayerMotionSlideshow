@@ -27,7 +27,22 @@ jQuery(document).ready(function ($) {
     var w = $(window).outerWidth();
 
     //bgcolour();
+
+    resize_shadow()
+    
   }
+
+  function resize_shadow() {
+    
+    var img_h = $('.img_box').outerHeight();
+    var img_w = $('.img_box').outerWidth();
+
+    console.log(img_h,img_w);
+
+    $('.shadow_box').css({'width': img_w, 'height': img_h});
+
+  }
+
 
   function bgcolour(){
     var tl = gsap.timeline();
@@ -69,9 +84,11 @@ $('.slide__img img').resizeToParent({
   parent: '.slide'
 });
 
+
+
  $('.logo').midnight();
 
-
+  AOS.init();
 
 // var $slider = $('.slider');
 

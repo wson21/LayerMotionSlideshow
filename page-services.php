@@ -39,8 +39,8 @@
     <div style="padding-bottom:100px;">
         <section class="contain_inner">
             <div class="content_left_img">
-                <img src="<?php echo get_template_directory_uri() ?>/images/services_1.jpg" class="img-fluid" width="600">
-                <div class="pic_shadow_left" style="height:520px;"></div>
+                <img src="<?php echo get_template_directory_uri() ?>/images/services_1.jpg" class="img-fluid img_box" width="600">
+                <div class="shadow_box pic_shadow_left"></div>
             </div>
             <div class="content_right_txt">
     

@@ -72,7 +72,7 @@ function custom_scripts() {
 	//wp_enqueue_script( 'stick', get_template_directory_uri() . '/js/slick.min.js', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'SmoothScroll', get_template_directory_uri() . '/js/SmoothScroll.js', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'barba', 'https://unpkg.com/@barba/core', array( jquery ), '1.0', true);
-	//wp_enqueue_script( 'aos', 'https://unpkg.com/aos@next/dist/aos.js', array( jquery ), '1.0', true);
+	wp_enqueue_script( 'aos', 'https://unpkg.com/aos@next/dist/aos.js', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'barba', get_template_directory_uri() . '/js/barba.min.js', array( jquery ), '1.0', true);
 	//wp_enqueue_script( 'aos', get_template_directory_uri() . '/js/aos.min.js', array( jquery ), '1.0', true);
 	
@@ -119,7 +119,7 @@ function custom_scripts() {
 	wp_enqueue_style( 'style-name', get_stylesheet_uri(),'2.0', true);
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css','1.0', true);
 	//wp_enqueue_style( 'aos', get_template_directory_uri().'/css/aos.css','2.0', true);
-	//wp_enqueue_style( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', true);
+	wp_enqueue_style( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', true);
 	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(jquery), '1.1.0', true );
 	
 }

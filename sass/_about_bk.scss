@@ -43,11 +43,9 @@
 
     .txt_wrap{
         width:90%;
-        padding-top:50px;
         
         @include media(">phone") {
             width:60%;
-            padding-top:0px;
         }
     
         @include media(">phone", "<tablet") {
@@ -63,17 +61,14 @@
 
     .pic_shadow_left{
 
-        background-color: rgb(235, 235, 235);
-        height: 860px;
-        width: 680px;
-        z-index: -1;
-        position: absolute;
-        top: 100px;
-        right: 100px;
-        display: none;
-
         @include media(">phone") {
-            display: block;
+            background-color: rgb(235, 235, 235);
+            height: 860px;
+            width: 680px;
+            z-index: -1;
+            position: absolute;
+            top: 100px;
+            right: 100px;
         }
 
         @include media(">phone", "<tablet") {
@@ -100,14 +95,10 @@
 }
 
 .reverse{
-    flex-direction: column-reverse;
-
-    @include media(">phone") {
-        flex-direction:row;
-
-    }
+    flex-direction:row;
 
     @include media(">phone", "<tablet") {
         flex-direction: column-reverse;
     }
+
 }

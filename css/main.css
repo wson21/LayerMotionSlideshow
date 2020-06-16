@@ -88,10 +88,6 @@ h5 {
   font-weight: 500;
 }
 
-.btn {
-  padding-top: 50px;
-}
-
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -429,6 +425,24 @@ span.wpcf7-not-valid-tip {
   color: white;
 }
 
+.read_more_btn {
+  padding-top: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: 321px) {
+  .read_more_btn {
+    text-align: left;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .read_more_btn {
+    text-align: center;
+  }
+}
+
 .contain_inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -436,12 +450,26 @@ span.wpcf7-not-valid-tip {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+@media (min-width: 321px) {
+  .contain_inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
@@ -450,6 +478,8 @@ span.wpcf7-not-valid-tip {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -490,7 +520,21 @@ span.wpcf7-not-valid-tip {
 }
 
 .contain_inner .txt_wrap {
-  width: 62%;
+  width: 90%;
+  padding-top: 50px;
+}
+
+@media (min-width: 321px) {
+  .contain_inner .txt_wrap {
+    width: 60%;
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .contain_inner .txt_wrap {
+    width: 90%;
+  }
 }
 
 .contain_inner .txt_wrap p {
@@ -507,6 +551,13 @@ span.wpcf7-not-valid-tip {
   position: absolute;
   top: 100px;
   right: 100px;
+  display: none;
+}
+
+@media (min-width: 321px) {
+  .contain_inner .pic_shadow_left {
+    display: block;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
@@ -532,10 +583,19 @@ span.wpcf7-not-valid-tip {
 }
 
 .reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media (min-width: 321px) {
+  .reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
@@ -873,6 +933,7 @@ span.wpcf7-not-valid-tip {
 
 .philosophy h3 {
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .philosophy .box_wrap {
@@ -886,6 +947,19 @@ span.wpcf7-not-valid-tip {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .philosophy .box_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .box {
@@ -900,21 +974,11 @@ span.wpcf7-not-valid-tip {
           flex-direction: row;
 }
 
-@media (min-width: 321px) and (max-width: 767px) {
-  .box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 .box .icon_size {
   width: 80px;
 }
 
 .contact {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -926,6 +990,8 @@ span.wpcf7-not-valid-tip {
           justify-content: center;
   background-image: url(../images/cotact_bg.jpg);
   color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 @media (min-width: 321px) and (max-width: 767px) {

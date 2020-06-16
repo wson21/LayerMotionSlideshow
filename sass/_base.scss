@@ -82,9 +82,9 @@ h5 {
 
 }
 
-.btn {
-    padding-top: 50px;
-}
+// .btn {
+//     padding-top: 50px;
+// }
 
 // index page //
 .img-fluid {
@@ -437,4 +437,19 @@ $color-link: rgb(31, 31, 31);
 }
 .midnightHeader.white {
   color: white;
+}
+
+
+.read_more_btn{
+  padding-top:50px;
+  font-weight:400;
+  text-align: center;
+
+  @include media(">phone") {
+    text-align:left;
+  }
+
+  @include media(">phone", "<tablet") {
+    text-align: center;
+  }
 }
