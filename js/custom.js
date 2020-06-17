@@ -29,7 +29,7 @@ jQuery(document).ready(function ($) {
     //bgcolour();
 
     resize_shadow()
-    
+    pro_resize_shadow()
   }
 
   function resize_shadow() {
@@ -40,6 +40,17 @@ jQuery(document).ready(function ($) {
     console.log(img_h,img_w);
 
     $('.shadow_box').css({'width': img_w, 'height': img_h});
+
+  }
+
+  function pro_resize_shadow() {
+    
+    var pro_h = $('.project_item img').outerHeight();
+    var pro_w = $('.project_item img').outerWidth();
+
+    console.log(pro_h,pro_w);
+
+    $('.pro_img_shadow').css({'width': pro_w, 'height': pro_h});
 
   }
 
@@ -75,7 +86,8 @@ jQuery(document).ready(function ($) {
 // Init slick slider + animation
 $('.slider').slick({
   autoplay: true,
-  speed: 1500,
+  speed: 500,
+  autoplaySpeed: 6000,
   arrows: false,
   dots: true,
 }).slickAnimation();

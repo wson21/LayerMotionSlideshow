@@ -1,0 +1,71 @@
+.projects_list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:0px;
+    width:90%;
+    margin: 0 auto;
+    padding-bottom:100px;
+    
+    @include media(">phone") {
+        grid-template-columns: 1fr;
+        grid-gap:0px;
+    }
+
+    @include media(">phone", "<tablet") {
+        grid-template-columns: 1fr;
+        grid-gap:0px;
+    }
+
+    @include media('>=desktop') {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:50px;
+    }
+
+}
+
+.project_item{
+    // background:cornsilk;
+    position: relative;
+    padding:50px;
+
+    h3{
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
+.project_item:nth-child(even) {
+    // background: cyan;
+    margin-top:0px;
+
+    @include media(">phone") {
+        margin-top:120px;
+
+    }
+
+    @include media(">phone", "<tablet") {
+        margin-top:0px;
+
+    }
+
+    @include media('>=desktop') {
+        margin-top:120px;
+
+    }
+}
+
+.pro_img_shadow{
+    background-color: rgba(169, 169, 169, 0.308);
+    position: absolute;
+    z-index:-1;
+    top:100px;
+    left:0;
+}
+
+.project_item:nth-child(even) .pro_img_shadow{
+    background-color: rgba(169, 169, 169, 0.308);
+    position: absolute;
+    z-index:-1;
+    top:100px;
+    left:100px;
+}

@@ -7,33 +7,7 @@
 
     <h1 style="text-align: center; padding-top:150px; padding-bottom:100px;">what we do</h1>
 
-    <section class="whatwedo__icon">
 
-        <div class="inhouse icon">
-            <img src="<?php echo get_template_directory_uri() ?>/images/furniture.svg" class="icon_size">
-            <h3>In-House</h3>
-            <p>Furniture Manufacturing</p>
-        </div>
-
-        <div class="project icon">
-        <img src="<?php echo get_template_directory_uri() ?>/images/project.svg" class="icon_size">
-        <h3>Project</h3>
-            <p>Furniture Manufacturing</p>
-        </div>
-
-        <div class="oem icon">
-        <img src="<?php echo get_template_directory_uri() ?>/images/oem.svg" class="icon_size">
-        <h3>oem</h3>
-            <p>Original Equipment Manufacturer </p>
-        </div>
-
-        <div class="interior icon">
-        <img src="<?php echo get_template_directory_uri() ?>/images/interior.svg" class="icon_size">
-        <h3>Interior</h3>
-            <p>Design & Renovation</p>
-        </div>
-
-    </section>
 
 
     <div style="padding-bottom:100px;">
@@ -62,7 +36,33 @@
         </section>
     </div>
 
+    <section class="whatwedo__icon">
 
+        <div class="inhouse icon">
+            <img src="<?php echo get_template_directory_uri() ?>/images/furniture.svg" class="icon_size">
+            <h3>In-House</h3>
+            <p>Furniture Manufacturing</p>
+        </div>
+
+        <div class="project icon">
+        <img src="<?php echo get_template_directory_uri() ?>/images/project.svg" class="icon_size">
+        <h3>Project</h3>
+            <p>Furniture Manufacturing</p>
+        </div>
+
+        <div class="oem icon">
+        <img src="<?php echo get_template_directory_uri() ?>/images/oem.svg" class="icon_size">
+        <h3>oem</h3>
+            <p>Original Equipment Manufacturer </p>
+        </div>
+
+        <div class="interior icon">
+        <img src="<?php echo get_template_directory_uri() ?>/images/interior.svg" class="icon_size">
+        <h3>Interior</h3>
+            <p>Design & Renovation</p>
+        </div>
+
+    </section>
 
 
     <!-- <section class="contain_inner reverse">

@@ -852,13 +852,102 @@ span.wpcf7-not-valid-tip {
           animation-name: zoomOutImage;
 }
 
+.projects_list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0px;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 321px) {
+  .projects_list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .projects_list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects_list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+  }
+}
+
+.project_item {
+  position: relative;
+  padding: 50px;
+}
+
+.project_item h3 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.project_item:nth-child(even) {
+  margin-top: 0px;
+}
+
+@media (min-width: 321px) {
+  .project_item:nth-child(even) {
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .project_item:nth-child(even) {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project_item:nth-child(even) {
+    margin-top: 120px;
+  }
+}
+
+.pro_img_shadow {
+  background-color: rgba(169, 169, 169, 0.308);
+  position: absolute;
+  z-index: -1;
+  top: 100px;
+  left: 0;
+}
+
+.project_item:nth-child(even) .pro_img_shadow {
+  background-color: rgba(169, 169, 169, 0.308);
+  position: absolute;
+  z-index: -1;
+  top: 100px;
+  left: 100px;
+}
+
 .project_info_wrap {
   padding-top: 150px;
   padding-bottom: 150px;
   padding: 0 auto;
   margin: 0 auto;
   width: 70%;
-  background: cornsilk;
+  background: rgba(0, 0, 0, 0.596);
+  position: absolute;
+  z-index: 99;
+  top: 150px;
+  left: 200px;
+  color: white;
+  display: none;
 }
 
 .project_info_wrap li span {
@@ -868,9 +957,10 @@ span.wpcf7-not-valid-tip {
 .projects_title {
   position: absolute;
   z-index: 99;
-  bottom: 100px;
-  right: 100px;
+  bottom: 150px;
+  right: 150px;
   color: white;
+  text-align: right;
 }
 
 .pre_next_project {
