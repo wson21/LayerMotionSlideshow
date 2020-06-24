@@ -3,9 +3,9 @@
 <?php if (have_posts()) : the_post(); ?>
 <?php endif; ?>
 
-<div data-barba="container" data-barba-namespace="index">
+<div data-barba="container" data-barba-namespace="index" >
 
-  <div class="slider stick-dots">
+  <div class="slider stick-dots" data-midnight="white">
     <div class="slide">
       <div class="slide__img">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow1.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
@@ -42,11 +42,11 @@
   </div>
 
     <section class="contain_inner">
-        <div class="content_left_img" data-aos="fade-right" data-aos-offset="500">
+        <div class="content_left_img" data-aos="fade-right" data-aos-offset="300">
             <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid img_box">
             <div class="shadow_box pic_shadow_left"></div>
         </div>
-        <div class="content_right_txt" data-aos="fade-left" data-aos-offset="600">
+        <div class="content_right_txt" data-aos="fade-left" data-aos-offset="300">
 
             <div class="txt_wrap">
                 <h2>
@@ -62,7 +62,7 @@
     </section>
 
     <section class="contain_inner reverse">
-        <div class="content_left_txt" data-aos="fade-right" data-aos-offset="500">
+        <div class="content_left_txt" data-aos="fade-right" data-aos-offset="300">
 
             <div class="txt_wrap">
                 <h2>
@@ -77,7 +77,7 @@
             </div>
         </div>
 
-        <div class="content_right_img" data-aos="fade-left" data-aos-offset="600">
+        <div class="content_right_img" data-aos="fade-left" data-aos-offset="300">
             <img src="<?php echo get_template_directory_uri() ?>/images/whatwedo.jpg" class="img-fluid">
             <div class="shadow_box pic_shadow_right"></div>
         </div>
@@ -85,25 +85,25 @@
 
     <section class="whatwedo__icon">
 
-        <div class="inhouse icon" data-aos="fade-up" data-aos-offset="300">
+        <div class="inhouse icon" data-aos="fade-up" data-aos-offset="200">
             <img src="<?php echo get_template_directory_uri() ?>/images/furniture.svg" class="icon_size">
             <h3>In-House</h3>
             <p>Furniture Manufacturing</p>
         </div>
 
-        <div class="project icon" data-aos="fade-up" data-aos-offset="400">
+        <div class="project icon" data-aos="fade-up" data-aos-offset="250">
         <img src="<?php echo get_template_directory_uri() ?>/images/project.svg" class="icon_size">
         <h3>Project</h3>
             <p>Furniture Manufacturing</p>
         </div>
 
-        <div class="oem icon" data-aos="fade-up" data-aos-offset="500">
+        <div class="oem icon" data-aos="fade-up" data-aos-offset="300">
         <img src="<?php echo get_template_directory_uri() ?>/images/oem.svg" class="icon_size">
         <h3>oem</h3>
             <p>Original Equipment Manufacturer </p>
         </div>
 
-        <div class="interior icon" data-aos="fade-up" data-aos-offset="600">
+        <div class="interior icon" data-aos="fade-up" data-aos-offset="350">
         <img src="<?php echo get_template_directory_uri() ?>/images/interior.svg" class="icon_size">
         <h3>Interior</h3>
             <p>Design & Renovation</p>
@@ -113,21 +113,21 @@
 
     <section class="philosophy" >
     <h3 data-aos="fade-up" data-aos-offset="300">OUR BUSINESS PHILOSOPHY</h3>
-            <div class="box_wrap" data-aos="fade-up" data-aos-offset="400">
+            <div class="box_wrap" data-aos="fade-up" data-aos-offset="200">
                 <div class="box">
                     <img src="<?php echo get_template_directory_uri() ?>/images/quality.svg" class="icon_size">
                     <h3>QUALITY</h3>
                     is our first priority.
                 </div>
     
-                <div class="box" data-aos="fade-up" data-aos-offset="500">
+                <div class="box" data-aos="fade-up" data-aos-offset="250">
                 <img src="<?php echo get_template_directory_uri() ?>/images/design.svg" class="icon_size">
                     <h3>DESIGN</h3>
                     is based on originality,<br/>
                     aesthetics and functionality.
                 </div>
     
-                <div class="box" data-aos="fade-up" data-aos-offset="600">
+                <div class="box" data-aos="fade-up" data-aos-offset="300">
                 <img src="<?php echo get_template_directory_uri() ?>/images/price.svg" class="icon_size">
                     <h3>PRICE</h3>
                     is always competitive.

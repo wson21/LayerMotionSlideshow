@@ -5,79 +5,43 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-<h1 style="text-align: center; padding-top: 200px;">Future Projects</h1>
+    <h1 style="text-align: center; padding-top:150px; padding-bottom:100px;">Future Projects</h1>
+   
+    
+	<?php
+    $query_args = array(
+        'post_type'             =>   'Projects',
+        'posts_per_page'        =>    20,
+        'post_status'           =>   'publish',
+        'ignore_sticky_posts'   =>   true,
+        'order'                 =>   'DESC',
+		//'paged' => get_query_var('paged')
+    );
+     
+    $wp_query = new WP_Query( $query_args );
+	$post_thumbnail_id = get_post_thumbnail_id($post->ID);
+	$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+	$terms = get_the_terms( $post_id, 'pcategory' );
+    ?>
 
-<section class="contain_inner projects_page">
-        <div class="content_left_img">
-            <img src="<?php echo get_template_directory_uri() ?>/images/project1.jpg" class="img-fluid">
-            <div class="pic_shadow_left"></div>
+    <section class="projects_list">
+    
+    <?php while( $wp_query->have_posts() ): $wp_query->the_post();
+	    $url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'large');
+        $img = get_post_thumbnail_id($post->ID);?>
+            
+        <div class="project_item project_box_1">
+
+            <?php echo $img ?>
+            <img src="<?php echo $url[0] ?>" class="img-fluid img_box"/>
+            <h3><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
+            <div class="pro_img_shadow"></div>
         </div>
-        <div class="content_right_txt">
 
-            <div class="txt_wrap">
-                <h2>
-                <a href="<?php echo site_url(); ?>/projects/skycube/">THE LANDMARK</a>
-                </h2>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="contain_inner reverse projects_page">
-        <div class="content_left_txt">
-
-            <div class="txt_wrap">
-                <h2>
-                <a href="<?php echo site_url(); ?>/projects/skycube/">THE REGENCY</a>
-                </h2>
-            </div>
-
-        </div>
-        <div class="content_right_img">
-            <img src="<?php echo get_template_directory_uri() ?>/images/project2.jpg" class="img-fluid">
-            <div class="pic_shadow_right"></div>
-        </div>
-    </section>
-
-
-    <section class="contain_inner projects_page">
-        <div class="content_left_img">
-            <img src="<?php echo get_template_directory_uri() ?>/images/project3.jpg" class="img-fluid">
-            <div class="pic_shadow_left"></div>
-        </div>
-        <div class="content_right_txt">
-
-            <div class="txt_wrap">
-                <h2>
-                <a href="<?php echo site_url(); ?>/projects/skycube/">TROPICS EIGHT</a>
-                </h2>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="contain_inner reverse projects_page">
-        <div class="content_left_txt">
-
-            <div class="txt_wrap">
-                <h2>
-                <a href="<?php echo site_url(); ?>/projects/skycube/">SKYCUBE RESIDENCE</a>
-                </h2>
-            </div>
-
-        </div>
-        <div class="content_right_img projects_page">
-            <img src="<?php echo get_template_directory_uri() ?>/images/project4.jpg" class="img-fluid">
-            <div class="pic_shadow_right"></div>
-        </div>
-    </section>
-
-
-    <section style="padding-top:150px; padding-bottom:150px; text-align:center;">
-        <h3>Load More Projects</h3>
+    <?php endwhile; ?>        
+    
     </section>
 
 </div>
-
 <?php include('libs/contact.php') ?>
 <?php include('footer.php'); ?>

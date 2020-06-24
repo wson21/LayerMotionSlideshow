@@ -133,6 +133,18 @@ h5 {
 
 }
 
+.midnightHeader.default {
+  .st0{fill:#F4E1AC;}
+  .st1{fill:#000000;}
+  filter: drop-shadow( 2px 2px 1px rgba(0, 0, 0, .2));
+}
+.midnightHeader.white {
+  .st0{fill:#F4E1AC;}
+  .st1{fill:#FFFFFF;}
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .5));
+}
+
+
 
 input[type="text"],
 input[type="email"],
@@ -206,7 +218,7 @@ div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing,
 div.wpcf7-mail-sent-ng {
   border: 0px solid;
-  color: rgba(59, 160, 255, 1);
+  color: #f8da9a;
   width: 100%;
   text-align: center;
   padding: 0 auto;
@@ -215,7 +227,7 @@ div.wpcf7-mail-sent-ng {
 }
 
 span.wpcf7-not-valid-tip {
-  color: rgba(59, 160, 255, 1);
+  color: #f8da9a;
   display: block;
   padding-top: 10px;
 }
@@ -434,12 +446,6 @@ $color-link: rgb(31, 31, 31);
 
 
 
-.midnightHeader.default {
-  color: black;
-}
-.midnightHeader.white {
-  color: white;
-}
 
 
 .read_more_btn{

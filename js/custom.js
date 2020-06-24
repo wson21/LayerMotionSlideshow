@@ -82,6 +82,11 @@ jQuery(document).ready(function ($) {
    });
 
 
+   $('.pro_info').click(function() {
+    $('.project_info_wrap').toggle();
+   });
+
+
 
 // Init slick slider + animation
 $('.slider').slick({
@@ -100,7 +105,10 @@ $('.slide__img img').resizeToParent({
 
  $('.logo').midnight();
 
-  AOS.init();
+//  $('.nav_icon').midnight();
+
+
+  AOS.init({disable: 'mobile'});
 
 // var $slider = $('.slider');
 

@@ -27,6 +27,7 @@
     // background:cornsilk;
     position: relative;
     padding:50px;
+    text-align: center;
 
     h3{
         text-align: center;
@@ -39,7 +40,7 @@
     margin-top:0px;
 
     @include media(">phone") {
-        margin-top:120px;
+        margin-top:80px;
 
     }
 
@@ -49,17 +50,36 @@
     }
 
     @include media('>=desktop') {
-        margin-top:120px;
+        margin-top:80px;
 
     }
 }
+
+// .img_box{
+//     opacity:0.5;
+//     width:60%;
+// }
 
 .pro_img_shadow{
     background-color: rgba(169, 169, 169, 0.308);
     position: absolute;
     z-index:-1;
     top:100px;
-    left:0;
+    left:30;
+    display: none;
+
+    @include media(">phone") {
+        display: none;
+    }
+
+    @include media(">phone", "<tablet") {
+        display: none;
+    }
+
+    @include media('>=desktop') {
+        display: block;
+    }
+
 }
 
 .project_item:nth-child(even) .pro_img_shadow{
@@ -67,5 +87,19 @@
     position: absolute;
     z-index:-1;
     top:100px;
-    left:100px;
+    left:180px;
+    display: none;
+
+    @include media(">phone") {
+        display: none;
+    }
+
+    @include media(">phone", "<tablet") {
+        display: none;
+    }
+
+    @include media('>=desktop') {
+        display: block;
+    }
+
 }

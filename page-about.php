@@ -10,11 +10,11 @@
     <section class="group_photo"><img src="<?php echo get_template_directory_uri() ?>/images/group_photo.jpg" class="img-fluid"></section>
 
     <section class="contain_inner">
-        <div class="content_left_img">
+        <div class="content_left_img" data-aos="fade-right" data-aos-offset="200">
             <img src="<?php echo get_template_directory_uri() ?>/images/about_1.jpg" class="img-fluid img_box" width="650">
             <div class="shadow_box pic_shadow_left"></div>
         </div>
-        <div class="content_right_txt">
+        <div class="content_right_txt" data-aos="fade-left" data-aos-offset="300">
 
             <div class="txt_wrap">
                 <h2>
@@ -37,7 +37,7 @@
     </section>
 
     <section class="contain_inner reverse">
-        <div class="content_left_txt">
+        <div class="content_left_txt" data-aos="fade-right" data-aos-offset="300">
 
             <div class="txt_wrap">
     
@@ -61,7 +61,7 @@
             </div>
 
         </div>
-        <div class="content_right_img">
+        <div class="content_right_img" data-aos="fade-left" data-aos-offset="300">
             <img src="<?php echo get_template_directory_uri() ?>/images/about_2.jpg" class="img-fluid img_box" width="650">
             <div class="shadow_box pic_shadow_right"></div>
         </div>
@@ -69,22 +69,22 @@
 
 
     <section class="philosophy">
-    <h3>OUR BUSINESS PHILOSOPHY</h3>
-            <div class="box_wrap">
+    <h3 ata-aos="fade-up" data-aos-offset="300" >OUR BUSINESS PHILOSOPHY</h3>
+            <div class="box_wrap" data-aos="fade-up" data-aos-offset="200">
                 <div class="box">
                     <img src="<?php echo get_template_directory_uri() ?>/images/quality.svg" class="icon_size">
                     <h3>QUALITY</h3>
                     is our first priority.
                 </div>
     
-                <div class="box">
+                <div class="box" data-aos="fade-up" data-aos-offset="250">
                 <img src="<?php echo get_template_directory_uri() ?>/images/design.svg" class="icon_size">
                     <h3>DESIGN</h3>
                     is based on originality,<br/>
                     aesthetics and functionality.
                 </div>
     
-                <div class="box">
+                <div class="box" data-aos="fade-up" data-aos-offset="300">
                 <img src="<?php echo get_template_directory_uri() ?>/images/price.svg" class="icon_size">
                     <h3>PRICE</h3>
                     is always competitive.

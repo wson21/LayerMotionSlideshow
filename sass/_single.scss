@@ -12,17 +12,27 @@
     left:200px;
     color: white;
     display: none;
-
-
-    li{
-
-
-        span{
-            font-weight: 400;
-        }
-    }
-
 }
+
+
+.concept_info{
+  padding-top:50px;
+}
+
+.concept_info span{
+    display: block;
+  }
+  
+  .concept_info span:nth-child(1){
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing:0;
+  }
+  
+  .concept_info li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
 
 
@@ -45,4 +55,55 @@
         flex:1;
     }
 
+}
+
+
+.info_wrap{
+  display: flex;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+  padding-top:0;
+  padding-bottom:0;
+    
+    @include media(">phone") {
+      height:auto;
+      padding-top:100px;
+      padding-bottom:100px;
+    }
+
+    @include media(">phone", "<tablet") {
+      height:auto;
+      padding-top:100px;
+      padding-bottom:100px;
+    }
+
+    @include media('>=desktop') {
+        height:100vh;
+        padding-top:0;
+        padding-bottom:0;
+    }
+
+  p{
+    width:60%;
+    padding-top:20px;
+  }
+}
+
+.info_title{
+  width:100%;
+  background: cornflowerblue;
+}
+
+.info_inner{
+  width: 70%;
+  display:flex;
+}
+
+.info_inner_left{
+  flex:1;
+}
+
+.info_inner_right{
+  flex:1;
 }

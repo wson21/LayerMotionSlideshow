@@ -7,66 +7,60 @@
 
     <h1 style="text-align: center; padding-top:150px; padding-bottom:100px;">what we do</h1>
 
+    <section class="contain_inner" data-aos="fade-right" data-aos-offset="300">
+        <div class="content_left_img">
+            <img src="<?php echo get_template_directory_uri() ?>/images/services_1.jpg" class="img-fluid img_box" width="600">
+            <div class="shadow_box pic_shadow_left"></div>
+        </div>
+        <div class="content_right_txt" data-aos="fade-left" data-aos-offset="300">
+    
+            <div class="txt_wrap">
+                <h2>
+                    Everything 
+                    You Can Dream of,
+                    We Make it a Reality.
+                </h2>
+    
+                <p>At Simfur Design, we are not just designers or builders; we are an all-in-one solution provider. That means that not only do we help you to design your kitchen, wardrobe or even your entire house or office, the way you want it, we are also able to manage your entire project for you, from design consultation all the way to manufacturing and installation, as well as liaise with all the relevant contractors and suppliers – so you can have an enjoyable experience while making your dream a vivid reality.
+                </p>
 
-
-
-    <div style="padding-bottom:100px;">
-        <section class="contain_inner">
-            <div class="content_left_img">
-                <img src="<?php echo get_template_directory_uri() ?>/images/services_1.jpg" class="img-fluid img_box" width="600">
-                <div class="shadow_box pic_shadow_left"></div>
             </div>
-            <div class="content_right_txt">
     
-                <div class="txt_wrap">
-                    <h2>
-                        Everything 
-                        You Can Dream of,
-                        We Make it a Reality.
-                    </h2>
-    
-                    <p>At Simfur Design, we are not just designers or builders; we are an all-in-one solution provider. That
-                    means that not only do we help you to design your kitchen, wardrobe or even your entire house or office, the way you want it, we are also able to manage your entire project for you, from design
-                    consultation all the way to manufacturing and installation, as well as liaise with all the relevant contractors and suppliers – so you can have an enjoyable experience while making your dream a
-                    vivid reality.</p>
-    
-                </div>
-    
-            </div>
-        </section>
-    </div>
+        </div>
+     </section>
 
-    <section class="whatwedo__icon">
 
-        <div class="inhouse icon">
+    <!-- <section class="whatwedo__icon">
+
+        <div class="inhouse icon" data-aos="fade-up" data-aos-offset="200">
             <img src="<?php echo get_template_directory_uri() ?>/images/furniture.svg" class="icon_size">
             <h3>In-House</h3>
             <p>Furniture Manufacturing</p>
         </div>
 
-        <div class="project icon">
+        <div class="project icon" data-aos="fade-up" data-aos-offset="250">
         <img src="<?php echo get_template_directory_uri() ?>/images/project.svg" class="icon_size">
         <h3>Project</h3>
             <p>Furniture Manufacturing</p>
         </div>
 
-        <div class="oem icon">
+        <div class="oem icon" data-aos="fade-up" data-aos-offset="300">
         <img src="<?php echo get_template_directory_uri() ?>/images/oem.svg" class="icon_size">
         <h3>oem</h3>
             <p>Original Equipment Manufacturer </p>
         </div>
 
-        <div class="interior icon">
+        <div class="interior icon" data-aos="fade-up" data-aos-offset="350">
         <img src="<?php echo get_template_directory_uri() ?>/images/interior.svg" class="icon_size">
         <h3>Interior</h3>
             <p>Design & Renovation</p>
         </div>
 
-    </section>
+    </section> -->
 
 
-    <!-- <section class="contain_inner reverse">
-        <div class="content_left_txt">
+    <section class="contain_inner reverse">
+        <div class="content_left_txt" data-aos="fade-right" data-aos-offset="300">
 
             <div class="txt_wrap">
                 <h3>
@@ -93,20 +87,21 @@
             </div>
 
         </div>
-        <div class="content_right_img">
-            <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
-            <div class="pic_shadow_right"></div>
+        <div class="content_right_img" data-aos="fade-left" data-aos-offset="300">
+            <!-- <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid img_box"> -->
+            <img src="<?php echo get_template_directory_uri() ?>/images/inhouse_furniture.jpg" class="img-fluid img_box" width="600">
+            <div class="shadow_box pic_shadow_right"></div>
         </div>
     </section>
 
     <section class="contain_inner">
-        <div class="content_left_img">
-            <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
-            <div class="pic_shadow_left"></div>
+        <div class="content_left_img" data-aos="fade-right" data-aos-offset="300">
+            <img src="<?php echo get_template_directory_uri() ?>/images/interior.jpg" class="img-fluid img_box" width="600">
+            <div class="shadow_box pic_shadow_left"></div>
         </div>
         <div class="content_right_txt">
 
-            <div class="txt_wrap">
+            <div class="txt_wrap" data-aos="fade-left" data-aos-offset="300">
                 <h3>
                 Interior
                 Design &
@@ -131,7 +126,7 @@
     </section>
 
     <section class="contain_inner reverse">
-        <div class="content_left_txt">
+        <div class="content_left_txt" data-aos="fade-right" data-aos-offset="300">
 
             <div class="txt_wrap">
                 <h3>
@@ -151,18 +146,19 @@
             </div>
 
         </div>
-        <div class="content_right_img">
-            <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
-            <div class="pic_shadow_right"></div>
+        <div class="content_right_img" data-aos="fade-left" data-aos-offset="300">
+            <img src="<?php echo get_template_directory_uri() ?>/images/project_management.jpg" class="img-fluid img_box">
+            <div class="shadow_box pic_shadow_right"></div>
         </div>
     </section>
 
     <section class="contain_inner">
-        <div class="content_left_img">
-            <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid">
-            <div class="pic_shadow_left"></div>
+        <div class="content_left_img" data-aos="fade-right" data-aos-offset="300">
+
+            <img src="<?php echo get_template_directory_uri() ?>/images/oem.jpg" class="img-fluid img_box">
+            <div class="shadow_box pic_shadow_left"></div>
         </div>
-        <div class="content_right_txt">
+        <div class="content_right_txt" data-aos="fade-left" data-aos-offset="300">
 
             <div class="txt_wrap">
                 <h3>
@@ -185,23 +181,78 @@
             </div>
 
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section>
+    <!-- <section class="service_list">
 
-        <ul></ul>
+        <ul>
+            <li>LIVING AREA</li>
+            <li>Television Cabinets</li>
+            <li>Display Shelves</li>
+            <li>Altars</li>
+            <li>Dividers</li>
+            <li>Partitions</li>
+            <li>Shoe Cupboards</li>
+        </ul>
 
-        <ul></ul>
+        <ul>
+            <li>KITCHEN</li>
+            <li>Hanging and Base Cabinets</li>
+            <li>Kitchen Tops</li>
+            <li>Kitchen Islands</li>
+            <li>Bar Counters</li>
+            <li>Breakfast Counters</li>
+        </ul>
 
-        <ul></ul>
+        <ul>
+            <li>OFFICE</li>
+            <li>Work Stations</li>
+            <li>Filing Cabinets</li>
+            <li>Pantries</li>
+            <li>Conference Tables</li>
+            <li>Reception Counters</li>
+            <li>Partitions</li>
+        </ul>
 
-        <ul></ul>
+        <ul>
+            <li>RETAIL OUTLET</li>
+            <li>Entrances</li>
+            <li>Reception Counters</li>
+            <li>Decorative Wall Panels</li>
+            <li>Magazine Racks</li>
+            <li>Signage</li>
+        </ul>
 
-        <ul></ul>
+        <ul>
+            <li>TURNKEY PROJECTS</li>
+            <li>Private Residences</li>
+            <li>Offices</li>
+            <li>Factories</li>
+            <li>Showrooms</li>
+            <li>Sales Galleries</li>
+            <li>Restoration Work</li>
+        </ul>
 
-        <ul></ul>
+        <ul>
+            <li>WOODWORKING</li>
+            <li>Office Furniture</li>
+            <li>Conference Rooms</li>
+            <li>Hotel Furniture</li>
+            <li>Gondola for Retail Outlets</li>
+        </ul>
 
-        <ul></ul>
+        <ul>
+            <li>BEDROOM</li>
+            <li>Walk-in Wardrobes</li>
+            <li>Bed Frames</li>
+            <li>Bedheads</li>
+            <li>Side Tables</li>
+            <li>Dressing Tables</li>
+            <li>Study Desks</li>
+            <li>Storage Cabinets</li>
+            <li>Book Shelves</li>
+            <li>Raised Platforms</li>
+        </ul>
 
     </section> -->
 

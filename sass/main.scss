@@ -94,6 +94,27 @@
     }
 }
 
+
+.service_list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    ul{
+        flex-basis:25%;
+    }
+
+    li{
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    li:first-child{
+        font-weight:400;
+    }
+}
+
+
 .contact{
     display: flex;
     align-items: center;

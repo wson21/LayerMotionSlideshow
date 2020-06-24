@@ -11,7 +11,7 @@
 	<?php
     $query_args = array(
         'post_type'             =>   'projects',
-        'posts_per_page'        =>    100,
+        'posts_per_page'        =>    10,
         'post_status'           =>   'publish',
         'ignore_sticky_posts'   =>   true,
         'order'                 =>   'DESC',
@@ -27,11 +27,12 @@
     
     <?php while( $wp_query->have_posts() ): $wp_query->the_post();
 	
-            $url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'large'); ?>
+            $url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'projects_thumb'); ?>
             
-        <div class="project_item project_box_1">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow1.jpg" class="img-fluid img_box"/>
-            <h3><?php echo get_the_title(); ?></h3>
+        <div class="project_item" data-aos="fade-left" data-aos-offset="200">
+            <a href="<?php the_permalink(); ?>">
+            <img src="<?php echo $url[0] ?>" class="img-fluid img_box"/>
+            <h3><?php echo get_the_title(); ?></h3></a>
             <div class="pro_img_shadow"></div>
         </div>
 

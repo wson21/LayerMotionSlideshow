@@ -138,6 +138,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'news-thumb', 300, 190,true ); //300 pixels wide (and unlimited height)
 add_image_size( 'home-thumb', 620, 290,true ); //300 pixels wide (and unlimited height)
 add_image_size( 'index_thumb', 300, 450); //300 pixels wide (and unlimited height)
+add_image_size( 'projects_thumb', 600, 450); //300 pixels wide (and unlimited height)
 
 // -----  Register new taxonomy applies to attachments  ----- //
 function remove_menus() {
