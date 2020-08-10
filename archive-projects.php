@@ -5,7 +5,7 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-    <h1 style="text-align: center; padding-top:150px; padding-bottom:100px;">Future Projects</h1>
+    <h1 style="text-align: center; padding-top:150px; padding-bottom:100px;">Featured Projects</h1>
    
     
 	<?php
