@@ -4,11 +4,10 @@
 <?php endif; ?>
 
 <div data-barba="container" data-barba-namespace="index" >
-
   <div class="slider stick-dots" data-midnight="white">
     <div class="slide">
       <div class="slide__img">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow1.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow1.jpg" class="full-image animated" />
       </div>
       <div class="slide__content">
         <div class="slide__content--headings">
@@ -19,7 +18,7 @@
     </div>
     <div class="slide">
       <div class="slide__img">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow2.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow2.jpg" class="full-image animated" />
       </div>
       <div class="slide__content">
         <div class="slide__content--headings">
@@ -30,7 +29,7 @@
     </div>
     <div class="slide">
       <div class="slide__img">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow3.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow3.jpg" class="full-image animated"/>
       </div>
       <div class="slide__content">
         <div class="slide__content--headings">

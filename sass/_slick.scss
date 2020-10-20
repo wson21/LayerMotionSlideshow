@@ -7,212 +7,210 @@ $slick-opacity-default: 0.75;
 $slick-opacity-on-hover: 1;
 $slick-opacity-not-active: 0.25;
 
-
 // Design Slider
-.slider, .slide {
-  height:100vh;
-
+.slider,
+.slide {
+	height: 100vh;
 }
 
 .slide {
-  position: relative;
+	position: relative;
 
-  .slide__img {
+	.slide__img {
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
 
-    width:100vw;
-    height:100vh;
-    overflow: hidden;
+		img {
+			opacity: 1 !important;
+			animation-duration: 3s;
+			transition: all 1s ease;
+		}
+	}
 
-    img {
-      opacity: 1 !important;
-      animation-duration: 3s;
-      transition: all 1s ease;
+	.slide__content {
+		width: auto;
+		position: absolute;
+		bottom: 10%;
+		right: 50%;
+		transform: translateX(50%);
+		// background: darkgray;
+		text-align: center;
+		text-shadow: 2px 1px 5px rgba(150, 150, 150, 0.64);
 
-    }
-  }
+		@media (min-width: 992px) {
+			bottom: 10%;
+			right: 5%;
+			transform: translateX(0%);
+			text-align: right;
+		}
 
-  .slide__content {
-    width:auto;
-    position: absolute;
-    bottom: 10%;
-    right: 50%;
-    transform: translateX(50%);
-    // background: darkgray;
-    text-align: center;
-    text-shadow: 2px 1px 5px rgba(150, 150, 150, 0.64);
+		&--headings {
+			color: #fff;
 
-    @media (min-width: 992px) {
-      bottom: 10%;
-      right: 5%;
-      transform: translateX(0%);
-      text-align: right;
-    }
+			// h2 {
+			//   margin: 10px 0;
+			// }
 
-    &--headings {
-      color: #FFF;
+			h2:after {
+				width: 80px;
+				height: 0px;
+				background: rgba(250, 240, 220, 0.5);
+				content: "";
+				margin-top: 10px;
+				position: absolute;
+				z-index: -1;
+				right: 0%;
 
-      // h2 {
-      //   margin: 10px 0;
-      // }
+				@media (min-width: 992px) {
+					width: 150px;
+					height: 30px;
+					background: rgba(251, 233, 194, 0.8);
+					content: "";
+					margin-top: 20px;
+					position: absolute;
+					z-index: -1;
+					right: 0%;
+				}
+			}
 
-      h2:after{
-        width:80px;
-        height:0px;
-        background: rgba(250, 240, 220,  0.5);
-        content:'';
-        margin-top:10px;
-        position: absolute;
-        z-index:-1;
-        right:0%;
+			.animated {
+				transition: all 0.5s ease;
+			}
 
-        @media (min-width: 992px) {
-          width:150px;
-          height:30px;
-          background: rgba(251, 233, 194,  0.8);
-          content:'';
-          margin-top:20px;
-          position: absolute;
-          z-index:-1;
-          right:0%;
-        }
+			p {
+				text-transform: uppercase;
+				padding-top: 10px;
 
-      }
-
-      .animated {
-        transition: all .5s ease;
-      }
-
-      p{
-        text-transform: uppercase;
-        padding-top:10px;
-
-        @media (min-width: 992px) {
-          padding-top:5px;
-        }
-
-      }
-
-    }
-  }
+				@media (min-width: 992px) {
+					padding-top: 5px;
+				}
+			}
+		}
+	}
 }
 
 // Change animation presets
 .slider [data-animation-in] {
-    opacity: 0;
-    animation-duration: 1.5s;
-    transition: opacity 0.5s ease 0.3s;
+	opacity: 0;
+	animation-duration: 1.5s;
+	transition: opacity 0.5s ease 0.3s;
 }
 
 // Dots
 .slick-dotted .slick-slider {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .slick-dots {
-    position: absolute;
-    bottom: 25px;
-    list-style: none;
-    display: block;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    li {
-        position: relative;
-        display: inline-block;
-        margin: 0 5px;
-        padding: 0;
-        cursor: pointer;
-        button {
-            border: 0;
-            display: block;
-            outline: none;
-            line-height: 0px;
-            font-size: 0px;
-            color: transparent;
-            padding: 5px;
-            cursor: pointer;
-            transition: all .3s ease;
-            &:hover, &:focus {
-                outline: none;
-            }
-        }
-    }
+	position: absolute;
+	bottom: 25px;
+	list-style: none;
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	li {
+		position: relative;
+		display: inline-block;
+		margin: 0 5px;
+		padding: 0;
+		cursor: pointer;
+		button {
+			border: 0;
+			display: block;
+			outline: none;
+			line-height: 0px;
+			font-size: 0px;
+			color: transparent;
+			padding: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			&:hover,
+			&:focus {
+				outline: none;
+			}
+		}
+	}
 }
 
 .simple-dots {
-  .slick-dots {
-    li {
-      width: $slick-dot-width;
-      height: $slick-dot-height;
-      button {
-        border-radius: 50%;
-        background-color: $slick-dot-color;
-        opacity: $slick-opacity-not-active;
-        width: $slick-dot-width;
-        height: $slick-dot-height;
-        &:hover, &:focus {
-          opacity: $slick-opacity-on-hover;
-        }
-      }
-      &.slick-active button {
-        color: $slick-dot-color-active;
-        opacity: $slick-opacity-default;
-      }
-    }
-  }
+	.slick-dots {
+		li {
+			width: $slick-dot-width;
+			height: $slick-dot-height;
+			button {
+				border-radius: 50%;
+				background-color: $slick-dot-color;
+				opacity: $slick-opacity-not-active;
+				width: $slick-dot-width;
+				height: $slick-dot-height;
+				&:hover,
+				&:focus {
+					opacity: $slick-opacity-on-hover;
+				}
+			}
+			&.slick-active button {
+				color: $slick-dot-color-active;
+				opacity: $slick-opacity-default;
+			}
+		}
+	}
 }
 
 .stick-dots {
-  .slick-dots {
-    li {
-      height: 3px;
-      width: 50px;
-      button {
-        position: relative;
-        background-color: $slick-dot-color;
-        opacity: $slick-opacity-not-active;
-        width: 50px;
-        height: 3px;
-        padding: 0;
-        &:hover, &:focus {
-          opacity: $slick-opacity-on-hover;
-        }
-      }
-      &.slick-active button {
-        color: $slick-dot-color-active;
-        opacity: $slick-opacity-default;
-        &:hover, &:focus {
-          opacity: $slick-opacity-on-hover;
-        }
-      }
-    }
-  }
+	.slick-dots {
+		li {
+			height: 3px;
+			width: 50px;
+			button {
+				position: relative;
+				background-color: $slick-dot-color;
+				opacity: $slick-opacity-not-active;
+				width: 50px;
+				height: 3px;
+				padding: 0;
+				&:hover,
+				&:focus {
+					opacity: $slick-opacity-on-hover;
+				}
+			}
+			&.slick-active button {
+				color: $slick-dot-color-active;
+				opacity: $slick-opacity-default;
+				&:hover,
+				&:focus {
+					opacity: $slick-opacity-on-hover;
+				}
+			}
+		}
+	}
 }
 
 /* /////////// IMAGE ZOOM /////////// */
 @keyframes zoomInImage {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-  to {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+	to {
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
 }
 
 .zoomInImage {
-  animation-name: zoomInImage;
+	animation-name: zoomInImage;
 }
 
 @keyframes zoomOutImage {
-  from {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-  to {
-    transform: scale3d(1, 1, 1);
-  }
+	from {
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	to {
+		transform: scale3d(1, 1, 1);
+	}
 }
 
 .zoomOutImage {
-  animation-name: zoomOutImage;
+	animation-name: zoomOutImage;
 }

@@ -7,7 +7,7 @@
 
     <h1 style="text-align: center; padding-top: 200px;">Who We Are</h1>
 
-    <section class="group_photo"><img src="<?php echo get_template_directory_uri() ?>/images/group_photo.jpg" class="img-fluid"></section>
+    <!-- <section class="group_photo"><img src="<?php echo get_template_directory_uri() ?>/images/group_photo.jpg" class="img-fluid"></section> -->
 
     <section class="contain_inner">
         <div class="content_left_img" data-aos="fade-right" data-aos-offset="200">
