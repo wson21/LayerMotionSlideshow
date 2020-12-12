@@ -31,7 +31,7 @@ $slick-opacity-not-active: 0.25;
 	.slide__content {
 		width: auto;
 		position: absolute;
-		bottom: 10%;
+		bottom: 30%;
 		right: 50%;
 		transform: translateX(50%);
 		// background: darkgray;
@@ -39,7 +39,7 @@ $slick-opacity-not-active: 0.25;
 		text-shadow: 2px 1px 5px rgba(150, 150, 150, 0.64);
 
 		@media (min-width: 992px) {
-			bottom: 10%;
+			bottom: 18%;
 			right: 5%;
 			transform: translateX(0%);
 			text-align: right;
@@ -104,7 +104,7 @@ $slick-opacity-not-active: 0.25;
 
 .slick-dots {
 	position: absolute;
-	bottom: 25px;
+	bottom: 80px;
 	list-style: none;
 	display: block;
 	text-align: center;
@@ -162,14 +162,14 @@ $slick-opacity-not-active: 0.25;
 .stick-dots {
 	.slick-dots {
 		li {
-			height: 3px;
+			height: 5px;
 			width: 50px;
 			button {
 				position: relative;
 				background-color: $slick-dot-color;
 				opacity: $slick-opacity-not-active;
 				width: 50px;
-				height: 3px;
+				height: 5px;
 				padding: 0;
 				&:hover,
 				&:focus {

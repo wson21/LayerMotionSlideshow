@@ -86,15 +86,27 @@ jQuery(document).ready(function ($) {
     $('.project_info_wrap').toggle();
    });
 
+   $(window).scroll(function () {
+		if (
+			$(window).scrollTop() + $(window).height() >
+			$(document).height() - 500
+		) {
 
+			$(".arrow_svg").addClass("up");
+
+		} else {
+			$(".arrow_svg").removeClass("up");
+		}
+
+	});
 
 // Init slick slider + animation
 $('.slider').slick({
   autoplay: true,
   speed: 500,
   autoplaySpeed: 6000,
-  arrows: false,
-  dots: true,
+  //arrows: false,
+  //dots: true,
 }).slickAnimation();
 
 $('.slide__img img').resizeToParent({

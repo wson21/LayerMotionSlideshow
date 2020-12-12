@@ -63,6 +63,7 @@
         <div class="content_left_txt" data-aos="fade-right" data-aos-offset="300">
 
             <div class="txt_wrap">
+                <img src="<?php echo get_template_directory_uri() ?>/images/furniture.svg" class="icon_size" width="150">
                 <h3>
                 In-House
                 Furniture
@@ -102,6 +103,7 @@
         <div class="content_right_txt">
 
             <div class="txt_wrap" data-aos="fade-left" data-aos-offset="300">
+                <img src="<?php echo get_template_directory_uri() ?>/images/interior.svg" class="icon_size" width="150">
                 <h3>
                 Interior
                 Design &
@@ -129,6 +131,7 @@
         <div class="content_left_txt" data-aos="fade-right" data-aos-offset="300">
 
             <div class="txt_wrap">
+                <img src="<?php echo get_template_directory_uri() ?>/images/project.svg" class="icon_size" width="150">
                 <h3>
                 Project Management
                 </h3>
@@ -161,12 +164,13 @@
         <div class="content_right_txt" data-aos="fade-left" data-aos-offset="300">
 
             <div class="txt_wrap">
+            <img src="<?php echo get_template_directory_uri() ?>/images/oem.svg" class="icon_size" width="150">
                 <h3>
                 Original
                 Equipment
                 Manufacturer</h3>
-                Furniture Manufacturing
-                
+
+                <p>Furniture Manufacturing</p>
 
                 <p>As a family-owned business with an impeccable track
                 record for commendable quality and workmanship, our

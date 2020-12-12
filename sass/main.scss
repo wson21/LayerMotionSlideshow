@@ -120,16 +120,17 @@
 
 	@include media(">phone") {
 		height: auto;
-		padding-top: 50px;
+		padding-top: 150px;
 	}
 
 	@include media(">phone", "<tablet") {
 		height: auto;
-		padding-top: 50px;
+		padding-top: 150px;
 	}
 
 	@include media(">=desktop") {
 		height: 100vh;
+		padding-top: 0px;
 	}
 
 	.contact_wrap {
@@ -252,7 +253,8 @@
 	// padding: 1rem;
 
 	img {
-		filter: grayscale(80%);
+		filter: grayscale(100%);
+		transition: 0.3s ease-in-out;
 	}
 	img:hover {
 		filter: grayscale(0%);
@@ -260,17 +262,30 @@
 }
 
 .cards {
-	max-width: 1200px;
+	max-width: 1350px;
 	margin: 0 auto;
 	display: grid;
-	grid-gap: 1rem;
+	grid-gap: 10px;
+	padding-bottom: 100px;
+
+	h5 {
+		padding-top: 10px;
+	}
+
+	.location {
+		padding-bottom: 10px;
+	}
+}
+
+.caption {
+	text-align: center;
+	padding-bottom: 30px;
 }
 
 /* Screen larger than 600px? 2 column */
 @media (min-width: 600px) {
 	.cards {
 		grid-template-columns: repeat(2, 1fr);
-		padding: 20px;
 	}
 }
 
@@ -278,6 +293,75 @@
 @media (min-width: 900px) {
 	.cards {
 		grid-template-columns: repeat(3, 1fr);
-		padding: 20px;
+	}
+}
+
+.arrow {
+	position: relative;
+	display: inline-block;
+	padding: 5px 0;
+	&:before {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 1px;
+		background-color: #8b8b8b;
+		top: 50%;
+		transition: width 0.5s ease-out;
+	}
+	&:after {
+		content: "";
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-top: 1px solid #8b8b8b;
+		border-right: 1px solid #8b8b8b;
+		transform: rotate(45deg);
+		top: calc(50% - 5px);
+		position: absolute;
+		right: 1px;
+	}
+	&:hover {
+		cursor: pointer;
+		&:before {
+			width: 80px;
+		}
+	}
+}
+
+.arrow_d {
+	position: fixed;
+	z-index: 100;
+	width: 35px;
+	bottom: 30px;
+	left: 30px;
+	animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	background: rgba(0, 0, 0, 0.5);
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+
+	@keyframes bounce {
+		50% {
+			transform: translateY(-15px);
+		}
+	}
+
+	.arrow_svg {
+		fill: none;
+		stroke: #ffffff;
+		stroke-width: 20;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-miterlimit: 30;
+		transform: rotate(180deg);
+		transform-origin: 50% 50%;
+		transition: all 0.3s ease-in-out;
+
+		&.up {
+			transform: rotate(0deg);
+			transition: all 0.3s ease-in-out;
+		}
 	}
 }

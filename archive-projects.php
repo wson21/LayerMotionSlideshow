@@ -40,7 +40,10 @@
             <a href="<?php the_permalink(); ?>">
                 <img src="<?php echo $url[0] ?>" class="img-fluid img_box"/>
             </a>
-            <?php echo get_the_title(); ?>
+            <div class="caption">
+                <h5><?php echo get_the_title(); ?></h5>
+                <!-- <p class="location">Penang</p> -->
+            </div>
         </div>
 
     <?php endwhile; ?>

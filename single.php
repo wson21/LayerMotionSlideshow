@@ -10,21 +10,21 @@
     <h3><?php the_title(); ?></h3>
   </div> -->
 
-  <div class="slider stick-dots" data-midnight="white" style="background:#000;">
+  <div class="slider stick-dots" data-midnight="white">
 
     <?php if ($attachments) {
         foreach ($attachments as $attachment_id) {
-        $alt = get_post_meta( $attachment_id->ID, '_wp_attachment_image_alt', true );
-        $caption = get_post($attachment_id)->post_excerpt;
-        $description = get_post($attachment_id)->post_content;
-        $href = get_permalink( $attachment_id->ID );
-        $src = $attachment_id->guid;
-        $title = $attachment_id->post_title;
+        $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
+        //$caption = get_post($attachment_id)->post_excerpt;
+        //$description = get_post($attachment_id)->post_content;
+        //$href = get_permalink( $attachment_id->ID );
+        //$src = $attachment_id->guid;
+        //$title = $attachment_id->post_title;
         ?>
 
           <div class="slide">
             <div class="slide__img">
-              <img src="<?php echo wp_get_attachment_url( $attachment_id ) ?>" class="full-image animated" data-animation-in="zoomInImage" alt="<?php echo $title; ?>"/>
+              <img src="<?php echo wp_get_attachment_url( $attachment_id ) ?>" class="full-image animated" alt="<?php echo $title; ?>"/>
             </div>
           </div>
 

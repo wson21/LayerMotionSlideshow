@@ -1,109 +1,105 @@
-.project_info_wrap{
-    padding-top: 150px;
-    padding-bottom:150px;
-    padding: 0 auto;
-    margin: 0 auto;
+.project_info_wrap {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	padding: 0 auto;
+	margin: 0 auto;
 
-    width:70%;
-    background:rgba(0, 0, 0, 0.596);
-    position: absolute;
-    z-index:99;
-    top:150px;
-    left:200px;
-    color: white;
-    display: none;
+	width: 70%;
+	background: rgba(0, 0, 0, 0.596);
+	position: absolute;
+	z-index: 99;
+	top: 150px;
+	left: 200px;
+	color: white;
+	display: none;
 }
 
-
-.concept_info{
-  padding-top:50px;
+.concept_info {
+	padding-top: 50px;
 }
 
-.concept_info span{
-    display: block;
-  }
-  
-  .concept_info span:nth-child(1){
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing:0;
-  }
-  
-  .concept_info li{
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-
-
-.projects_title{
-    position: absolute;
-    z-index:99;
-    bottom:150px;
-    right:150px;
-    color:white;
-    text-align:right;
+.concept_info span {
+	display: block;
 }
 
-.pre_next_project{
-    background: rgba(255, 255, 0, 0.144);
-    display: flex;
-    padding-top:50px;
-    padding-bottom:50px;
-
-    .pre_btn, .next_btn{
-        flex:1;
-    }
-
+.concept_info span:nth-child(1) {
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 0;
 }
 
-
-.info_wrap{
-  display: flex;
-  height:100vh;
-  align-items: center;
-  justify-content: center;
-  padding-top:0;
-  padding-bottom:0;
-    
-    @include media(">phone") {
-      height:auto;
-      padding-top:100px;
-      padding-bottom:100px;
-    }
-
-    @include media(">phone", "<tablet") {
-      height:auto;
-      padding-top:100px;
-      padding-bottom:100px;
-    }
-
-    @include media('>=desktop') {
-        height:100vh;
-        padding-top:0;
-        padding-bottom:0;
-    }
-
-  p{
-    width:60%;
-    padding-top:20px;
-  }
+.concept_info li {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-.info_title{
-  width:100%;
-  background: cornflowerblue;
+.projects_title {
+	position: absolute;
+	z-index: 99;
+	bottom: 150px;
+	right: 150px;
+	color: white;
+	text-align: right;
 }
 
-.info_inner{
-  width: 70%;
-  display:flex;
+.pre_next_project {
+	background: rgba(255, 255, 0, 0.144);
+	display: flex;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	.pre_btn,
+	.next_btn {
+		flex: 1;
+	}
 }
 
-.info_inner_left{
-  flex:1;
+.info_wrap {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	@include media(">phone") {
+		height: auto;
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	@include media(">phone", "<tablet") {
+		height: auto;
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	@include media(">=desktop") {
+		height: 100vh;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	p {
+		width: 60%;
+		padding-top: 20px;
+	}
 }
 
-.info_inner_right{
-  flex:1;
+.info_title {
+	width: 100%;
+	background: cornflowerblue;
+}
+
+.info_inner {
+	width: 70%;
+	display: flex;
+}
+
+.info_inner_left {
+	flex: 1;
+}
+
+.info_inner_right {
+	flex: 1;
 }

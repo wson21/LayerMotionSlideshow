@@ -4,16 +4,27 @@
 <?php endif; ?>
 
 <div data-barba="container" data-barba-namespace="index" >
+
+<section class="arrow_d">
+	<div id='message'></div>
+	<svg version="1.1" x="0px" y="0px" viewBox="0 0 200 130.9">
+	<path class="arrow_svg" d="M8.3,118.4l92.4-106.9l91,106.9"/>
+	</svg>
+</section>
+
+
   <div class="slider stick-dots" data-midnight="white">
     <div class="slide">
       <div class="slide__img">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow1.jpg" class="full-image animated" />
       </div>
       <div class="slide__content">
-        <div class="slide__content--headings">
-           <h2 class="animated" data-animation-in="fadeInUp">tropics eight</h2>
-           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
-        </div>
+        <a href="http://pixewn.com/simfur/projects/tropics-eight/">
+          <div class="slide__content--headings">
+             <h2 class="animated" data-animation-in="fadeInUp">tropics eight</h2>
+             <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
+          </div>
+        </a>
       </div>
     </div>
     <div class="slide">
@@ -21,10 +32,12 @@
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow2.jpg" class="full-image animated" />
       </div>
       <div class="slide__content">
-        <div class="slide__content--headings">
-           <h2 class="animated" data-animation-in="fadeInUp">tanjung point</h2>
-           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
-        </div>
+        <a href="http://pixewn.com/simfur/projects/bagan-specialist-centre/">
+          <div class="slide__content--headings">
+             <h2 class="animated" data-animation-in="fadeInUp">Bagan Specialist Centre</h2>
+             <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
+          </div>
+        </a>
       </div>
     </div>
     <div class="slide">
@@ -32,10 +45,12 @@
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/slideshow3.jpg" class="full-image animated"/>
       </div>
       <div class="slide__content">
-        <div class="slide__content--headings">
-           <h2 class="animated" data-animation-in="fadeInUp">Landmark</h2>
-           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
-        </div>
+        <a href="http://pixewn.com/simfur/projects/the-landmark/">
+          <div class="slide__content--headings">
+             <h2 class="animated" data-animation-in="fadeInUp">Landmark</h2>
+             <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">Penang</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -54,7 +69,7 @@
                 </h2>
                 <p>Founded in the 1980s in Penang, Malaysia under the name Sim Furnishing, we started from a humble beginning providing custom-made wooden furniture for private oresidences and small-time commercial clients. Over the years, our commitment to original craftsmanship, quality materials and workmanship has propelled us by leaps and bounds and enabled us to explore the many facets of interior design, construction and project management. In 2005, our business model was revamped as a total solution provider when the company was incorporated as Simfur Design Sdn. Bhd.</p>
                 
-                <div class="read_more_btn"><a href="<?php echo site_url(); ?>/about/">Read more Who We Are -></a></div>
+                <div class="read_more_btn"><a href="<?php echo site_url(); ?>/about/">More Who We Are <span class="arrow"></span></a></div>
             </div>
 
         </div>
@@ -72,7 +87,7 @@
     
                 <p>At Simfur Design, we are not just designers or builders; we are an all-in-one solution provider. That means that not only do we help you to design your kitchen, wardrobe or even your entire house or office, the way you want it, we are also able to manage your entire project for you, from design consultation all the way to manufacturing and installation, as well as liaise with all the relevant contractors and suppliers – so you can have an enjoyable experience while making your dream a vivid reality.</p>
 
-                <div class="read_more_btn"><a href="<?php echo site_url(); ?>/services/">Read more What We Do -></a></div>
+                <div class="read_more_btn"><a href="<?php echo site_url(); ?>/services/">More What We Do <span class="arrow"></span></a></div>
             </div>
         </div>
 
