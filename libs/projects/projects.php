@@ -580,7 +580,7 @@ jQuery(document).ready(function($) {
     // Uploading files
     var slideshow_frame;
 
-    jQuery('.add_slideshow_images').live('click', function(event) {
+    jQuery('.add_slideshow_images').on('click', function(event) {
 
         event.preventDefault();
 

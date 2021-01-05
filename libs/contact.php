@@ -2,17 +2,17 @@
 
     <div class="contact_wrap">
 
-        <h3 class="text_center">start a project now</h3>
+    <h3 class="text_center">start a project now</h3>
 
-        <p class="text_center">We always welcome new opportunities, whether large, small or artisanal.</p>
+    <p class="text_center">We always welcome new opportunities, whether large, small or artisanal.</p>
 
 
         <div class="container">
-
+            
             <div class="left enquiry">
                 <?php echo do_shortcode( '[contact-form-7 id="1234" title="Contact form 1"]' ); ?>
             </div>
-
+            
             <div class="right info">
                 <h4>​​Simfur Design Sdn Bhd</h4><br><br>
 
@@ -22,7 +22,7 @@
 
                 Bayan Lepas 11900 Penang.<br><br>
 
-                T 604 - 637 1177<br><br>
+                T  604 - 637 1177<br><br>
 
                 <h5>PRODUCTION OFFICE</h5><br>
 
@@ -38,14 +38,14 @@
                 E sales@simfur.com<br><br>
 
                 <h5>Follow US</h5><br>
-                <ul>
-                    <li><a href="https://www.facebook.com/SimfurDesignSB" target="_blank">facebook</a></li>
-                    <li>instagram</li>
-                    <li>pinterest</li>
-                </ul>
+                    <ul>
+                        <li>facebook</li>
+                        <li>instagram</li>
+                        <li>pinterest</li>
+                    </ul>
 
+                </div>
             </div>
-        </div>
     </div>
 
 </section>
