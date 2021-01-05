@@ -105,8 +105,8 @@ $('.slider').slick({
   autoplay: true,
   speed: 500,
   autoplaySpeed: 6000,
-  //arrows: false,
-  //dots: true,
+  arrows: false,
+  dots: true,
 }).slickAnimation();
 
 $('.slide__img img').resizeToParent({

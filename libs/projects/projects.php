@@ -214,12 +214,12 @@ function my_manage_projects_columns( $column, $post_id ) {
 			if( $image_attributes ) {?>
 
 
-			<img src="<?php echo $image_attributes[0]; ?>" width="50">
+<img src="<?php echo $image_attributes[0]; ?>" width="50">
 
 
-	<?php } ?>
+<?php } ?>
 
-	<?php
+<?php
 			//echo '<img src="'.$url.'" width="50">';
 			
 			//echo $url;
@@ -421,56 +421,61 @@ function custom_postimage_meta_box_func($post){
     foreach($meta_keys as $meta_key){
         $image_meta_val=get_post_meta( $post->ID, $meta_key, true);
         ?>
-        <div class="custom_postimage_wrapper" id="<?php echo $meta_key; ?>_wrapper" style="margin-bottom:20px;">
-            <img src="<?php echo ($image_meta_val!=''?wp_get_attachment_image_src( $image_meta_val)[0]:''); ?>" style="width:100%;display: <?php echo ($image_meta_val!=''?'block':'none'); ?>" alt="">
+<div class="custom_postimage_wrapper" id="<?php echo $meta_key; ?>_wrapper" style="margin-bottom:20px;">
+    <img src="<?php echo ($image_meta_val!=''?wp_get_attachment_image_src( $image_meta_val)[0]:''); ?>"
+        style="width:100%;display: <?php echo ($image_meta_val!=''?'block':'none'); ?>" alt="">
 
-            <a class="addimage button" style="margin-top:15px;" onclick="custom_postimage_add_image('<?php echo $meta_key; ?>');"><?php _e('add image','yourdomain'); ?></a><br>
-            <a class="removeimage" style="color:#a00;cursor:pointer;display: <?php echo ($image_meta_val!=''?'block':'none'); ?>" onclick="custom_postimage_remove_image('<?php echo $meta_key; ?>');"><?php _e('Remove featured image','yourdomain'); ?></a>
-            <input type="hidden" name="<?php echo $meta_key; ?>" id="<?php echo $meta_key; ?>" value="<?php echo $image_meta_val; ?>" />
-        </div>
-    <?php } ?>
-    <script>
-    function custom_postimage_add_image(key){
+    <a class="addimage button" style="margin-top:15px;"
+        onclick="custom_postimage_add_image('<?php echo $meta_key; ?>');"><?php _e('add image','yourdomain'); ?></a><br>
+    <a class="removeimage"
+        style="color:#a00;cursor:pointer;display: <?php echo ($image_meta_val!=''?'block':'none'); ?>"
+        onclick="custom_postimage_remove_image('<?php echo $meta_key; ?>');"><?php _e('Remove featured image','yourdomain'); ?></a>
+    <input type="hidden" name="<?php echo $meta_key; ?>" id="<?php echo $meta_key; ?>"
+        value="<?php echo $image_meta_val; ?>" />
+</div>
+<?php } ?>
+<script>
+function custom_postimage_add_image(key) {
 
-        var $wrapper = jQuery('#'+key+'_wrapper');
+    var $wrapper = jQuery('#' + key + '_wrapper');
 
-        custom_postimage_uploader = wp.media.frames.file_frame = wp.media({
-            title: '<?php _e('select image','yourdomain'); ?>',
-            button: {
-                text: '<?php _e('select image','yourdomain'); ?>'
-            },
-            multiple: false
-        });
-        custom_postimage_uploader.on('select', function() {
+    custom_postimage_uploader = wp.media.frames.file_frame = wp.media({
+        title: '<?php _e('select image','yourdomain'); ?>',
+        button: {
+            text: '<?php _e('select image','yourdomain'); ?>'
+        },
+        multiple: false
+    });
+    custom_postimage_uploader.on('select', function() {
 
-            var attachment = custom_postimage_uploader.state().get('selection').first().toJSON();
-            var img_url = attachment['url'];
-            var img_id = attachment['id'];
-            $wrapper.find('input#'+key).val(img_id);
-            $wrapper.find('img').attr('src',img_url);
-            $wrapper.find('img').show();
-            $wrapper.find('a.removeimage').show();
-        });
-        custom_postimage_uploader.on('open', function(){
-            var selection = custom_postimage_uploader.state().get('selection');
-            var selected = $wrapper.find('input#'+key).val();
-            if(selected){
-                selection.add(wp.media.attachment(selected));
-            }
-        });
-        custom_postimage_uploader.open();
-        return false;
-    }
+        var attachment = custom_postimage_uploader.state().get('selection').first().toJSON();
+        var img_url = attachment['url'];
+        var img_id = attachment['id'];
+        $wrapper.find('input#' + key).val(img_id);
+        $wrapper.find('img').attr('src', img_url);
+        $wrapper.find('img').show();
+        $wrapper.find('a.removeimage').show();
+    });
+    custom_postimage_uploader.on('open', function() {
+        var selection = custom_postimage_uploader.state().get('selection');
+        var selected = $wrapper.find('input#' + key).val();
+        if (selected) {
+            selection.add(wp.media.attachment(selected));
+        }
+    });
+    custom_postimage_uploader.open();
+    return false;
+}
 
-    function custom_postimage_remove_image(key){
-        var $wrapper = jQuery('#'+key+'_wrapper');
-        $wrapper.find('input#'+key).val('');
-        $wrapper.find('img').hide();
-        $wrapper.find('a.removeimage').hide();
-        return false;
-    }
-    </script>
-    <?php
+function custom_postimage_remove_image(key) {
+    var $wrapper = jQuery('#' + key + '_wrapper');
+    $wrapper.find('input#' + key).val('');
+    $wrapper.find('img').hide();
+    $wrapper.find('a.removeimage').hide();
+    return false;
+}
+</script>
+<?php
     wp_nonce_field( 'custom_postimage_meta_box', 'custom_postimage_meta_box_nonce' );
 }
 
@@ -514,16 +519,16 @@ function custom_slideshow_images_meta_box(){
 
 function custom_slideshow_images_meta_box_func($post){?>
 
-	
-	<a href="#" class="add_slideshow_images">Add slideshow images</a>
 
-	<div>Drag for sorting slideshow</div>
-	<div class="new_sideshow">
+<a href="#" class="add_slideshow_images">Add slideshow images</a>
 
-		<div id="slideshow_wrapper">
+<div>Drag for sorting slideshow</div>
+<div class="new_sideshow">
 
-			<ul class="slideshow_images">
-				<?php
+    <div id="slideshow_wrapper">
+
+        <ul class="slideshow_images">
+            <?php
 				if (metadata_exists('post', $post->ID, '_slideshow_images')) {
 					$slideshow_images = get_post_meta($post->ID,'_slideshow_images', TRUE);
 				} else {
@@ -537,126 +542,126 @@ function custom_slideshow_images_meta_box_func($post){?>
 						$image_attributes = wp_get_attachment_image_src( $attachment_id );
 										
 						echo '<li class="image" data-attachment_id="'.$attachment_id.'"> <img src="'. $image_attributes[0] .' " class"image" alt="<?php echo $thumb_title;?>"/>
-						<span><a href="#" class="delete_slide" title="Delete image">✕</a></span>
-						</li>'
-					;}
-				}
-				?>
-			</ul>
-			<input type="hidden" id="slideshow_images" name="slideshow_images"
-			value="<?php echo esc_attr( $slideshow_images ); ?>" />
-		</div>
-	</div>
+            <span><a href="#" class="delete_slide" title="Delete image">✕</a></span>
+            </li>'
+            ;}
+            }
+            ?>
+        </ul>
+        <input type="hidden" id="slideshow_images" name="slideshow_images"
+            value="<?php echo esc_attr( $slideshow_images ); ?>" />
+    </div>
+</div>
 
 
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
+<script type="text/javascript">
+jQuery(document).ready(function($) {
 
-			// Set variables
-			var $image_slideshow_ids = $('#slideshow_images');
-			var $slideshow_images = $('#slideshow_wrapper .slideshow_images');
+    // Set variables
+    var $image_slideshow_ids = $('#slideshow_images');
+    var $slideshow_images = $('#slideshow_wrapper .slideshow_images');
 
-			// Make images sortable
-			$slideshow_images.sortable({
-				cursor: 'move',
-				items: '.image',
-				connectWith: "#slideshow_wrapper",
-        		containment: "#slideshow_wrapper",
-				update: function(event, ui) {
-					var attachment_ids = '';
-					$('#slideshow_wrapper ul .image').css('cursor', 'default').each(function() {
-						var attachment_id = jQuery(this).attr('data-attachment_id');
-						attachment_ids = attachment_ids + attachment_id + ',';
-					});
-					$image_slideshow_ids.val(attachment_ids);
-				}
-			});
+    // Make images sortable
+    $slideshow_images.sortable({
+        cursor: 'move',
+        items: '.image',
+        connectWith: "#slideshow_wrapper",
+        containment: "#slideshow_wrapper",
+        update: function(event, ui) {
+            var attachment_ids = '';
+            $('#slideshow_wrapper ul .image').css('cursor', 'default').each(function() {
+                var attachment_id = jQuery(this).attr('data-attachment_id');
+                attachment_ids = attachment_ids + attachment_id + ',';
+            });
+            $image_slideshow_ids.val(attachment_ids);
+        }
+    });
 
-			// Uploading files
-			var slideshow_frame;
+    // Uploading files
+    var slideshow_frame;
 
-			jQuery('.add_slideshow_images').live('click', function(event) {
+    jQuery('.add_slideshow_images').live('click', function(event) {
 
-				event.preventDefault();
+        event.preventDefault();
 
-				// If the media frame already exists, reopen it.
-				if (slideshow_frame) {
-					slideshow_frame.open();
-					return;
-				}
+        // If the media frame already exists, reopen it.
+        if (slideshow_frame) {
+            slideshow_frame.open();
+            return;
+        }
 
-				// Create the media frame.
-				slideshow_frame = wp.media.frames.downloadable_file = wp.media({
+        // Create the media frame.
+        slideshow_frame = wp.media.frames.downloadable_file = wp.media({
 
-					// Set the title of the modal.
-					title: 'Add Images to Slideshow',
+            // Set the title of the modal.
+            title: 'Add Images to Slideshow',
 
-					// Set the button of the modal.
-					button: {
-						text: 'Add to slideshow',
-					},
+            // Set the button of the modal.
+            button: {
+                text: 'Add to slideshow',
+            },
 
-					states: [
-						new wp.media.controller.Library({
-							library: wp.media.query({
-								type: 'image'
-							}),
-							multiple: true, // do not allow multiple files, if you want multiple, set true
-							filterable: 'all' // turn on filters
-						})
-					]
+            states: [
+                new wp.media.controller.Library({
+                    library: wp.media.query({
+                        type: 'image'
+                    }),
+                    multiple: true, // do not allow multiple files, if you want multiple, set true
+                    filterable: 'all' // turn on filters
+                })
+            ]
 
-					// Set to true to allow multiple files to be selected
-					//multiple: true
+            // Set to true to allow multiple files to be selected
+            //multiple: true
 
-				});
+        });
 
-				var $el = $(this);
-				var attachment_ids = $image_slideshow_ids.val();
+        var $el = $(this);
+        var attachment_ids = $image_slideshow_ids.val();
 
-				// When an image is selected, run a callback.
-				slideshow_frame.on('select', function() {
-					var selection = slideshow_frame.state().get('selection');
-					selection.map(function(attachment) {
-						attachment = attachment.toJSON();
-						if (attachment.id) {
-							attachment_ids = attachment_ids ? attachment_ids + "," + attachment
-								.id : attachment.id;
-							$slideshow_images.append('\
+        // When an image is selected, run a callback.
+        slideshow_frame.on('select', function() {
+            var selection = slideshow_frame.state().get('selection');
+            selection.map(function(attachment) {
+                attachment = attachment.toJSON();
+                if (attachment.id) {
+                    attachment_ids = attachment_ids ? attachment_ids + "," + attachment
+                        .id : attachment.id;
+                    $slideshow_images.append('\
 										<li class="image" data-attachment_id="' + attachment.id + '">\
 											<img src="' + attachment.url + '" />\
 											<span><a href="#" class="delete_slide" title="Delete image">✕</a></span>\
 										</li>');
-						}
-					});
-					$image_slideshow_ids.val(attachment_ids);
-				});
+                }
+            });
+            $image_slideshow_ids.val(attachment_ids);
+        });
 
-				// Finally, open the modal
-				slideshow_frame.open();
+        // Finally, open the modal
+        slideshow_frame.open();
 
-			});
+    });
 
-			// Remove files
-			$('#slideshow_wrapper').on('click', 'a.delete_slide', function() {
+    // Remove files
+    $('#slideshow_wrapper').on('click', 'a.delete_slide', function() {
 
-				$(this).closest('.image').remove();
-				var attachment_ids = '';
+        $(this).closest('.image').remove();
+        var attachment_ids = '';
 
-				$('#slideshow_wrapper ul .image').css('cursor', 'default').each(function() {
-					var attachment_id = jQuery(this).attr('data-attachment_id');
-					attachment_ids = attachment_ids + attachment_id + ',';
-				});
+        $('#slideshow_wrapper ul .image').css('cursor', 'default').each(function() {
+            var attachment_id = jQuery(this).attr('data-attachment_id');
+            attachment_ids = attachment_ids + attachment_id + ',';
+        });
 
-				$image_slideshow_ids.val(attachment_ids);
-				return false;
+        $image_slideshow_ids.val(attachment_ids);
+        return false;
 
-			});
+    });
 
-		});
-	</script>
+});
+</script>
 
-	<?php
+<?php
      wp_nonce_field( 'custom_slideshow_images_meta_box', 'custom_slideshow_images_meta_box_nonce' );
 }
 

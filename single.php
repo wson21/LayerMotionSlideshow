@@ -2,17 +2,17 @@
 
 <div data-barba="container" data-barba-namespace="index">
 
-<?php if ( have_posts() ) : the_post();
+    <?php if ( have_posts() ) : the_post();
 		$slideshow_images = get_post_meta($post->ID,'_slideshow_images', TRUE);
 		$attachments = array_filter(explode(',', $slideshow_images));?>
 
-  <!-- <div class="projects_title">
+    <!-- <div class="projects_title">
     <h3><?php the_title(); ?></h3>
   </div> -->
 
-  <div class="slider stick-dots" data-midnight="white">
+    <div class="slider stick-dots" data-midnight="white">
 
-    <?php if ($attachments) {
+        <?php if ($attachments) {
         foreach ($attachments as $attachment_id) {
         $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
         //$caption = get_post($attachment_id)->post_excerpt;
@@ -22,23 +22,30 @@
         //$title = $attachment_id->post_title;
         ?>
 
-          <div class="slide">
+        <div class="slide">
             <div class="slide__img">
-              <img src="<?php echo wp_get_attachment_url( $attachment_id ) ?>" class="full-image animated" alt="<?php echo $title; ?>"/>
+                <img src="<?php echo wp_get_attachment_url( $attachment_id ) ?>" class="full-image animated"
+                    alt="<?php echo $title; ?>" />
             </div>
-          </div>
+        </div>
 
-          <?php }
+        <?php }
             }?>
-            
-    <?php endif; ?>
 
-  </div>
-  
-   
-  <section class="info_wrap">
-    
-    <div class="info_inner">
+        <?php endif; ?>
+
+    </div>
+
+
+    <section class="info_wrap">
+
+        <div class="container">
+            <?php the_content();?>
+        </div>
+
+
+        <!-- <div cl
+        ass="info_inner">
       <div class="info_inner_left">
         <div><h2><?php the_title(); ?></h2>
     
@@ -74,9 +81,9 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
-  </section>
+    </section>
 
 
 

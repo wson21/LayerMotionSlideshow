@@ -9,25 +9,31 @@
 
     <section class="contain_inner" data-aos="fade-right" data-aos-offset="300">
         <div class="content_left_img">
-            <img src="<?php echo get_template_directory_uri() ?>/images/services_1.jpg" class="img-fluid img_box" width="600">
+            <img src="<?php echo get_template_directory_uri() ?>/images/services_1.jpg" class="img-fluid img_box"
+                width="600">
             <div class="shadow_box pic_shadow_left"></div>
         </div>
         <div class="content_right_txt" data-aos="fade-left" data-aos-offset="300">
-    
+
             <div class="txt_wrap">
                 <h2>
-                    Everything 
+                    Everything
                     You Can Dream of,
                     We Make it a Reality.
                 </h2>
-    
-                <p>At Simfur Design, we are not just designers or builders; we are an all-in-one solution provider. That means that not only do we help you to design your kitchen, wardrobe or even your entire house or office, the way you want it, we are also able to manage your entire project for you, from design consultation all the way to manufacturing and installation, as well as liaise with all the relevant contractors and suppliers – so you can have an enjoyable experience while making your dream a vivid reality.
+
+                <p>At Simfur Design, we are not just designers or builders; we are an all-in-one solution provider. That
+                    means that not only do we help you to design your kitchen, wardrobe or even your entire house or
+                    office, the way you want it, we are also able to manage your entire project for you, from design
+                    consultation all the way to manufacturing and installation, as well as liaise with all the relevant
+                    contractors and suppliers – so you can have an enjoyable experience while making your dream a vivid
+                    reality.
                 </p>
 
             </div>
-    
+
         </div>
-     </section>
+    </section>
 
 
     <!-- <section class="whatwedo__icon">
@@ -63,13 +69,14 @@
         <div class="content_left_txt" data-aos="fade-right" data-aos-offset="300">
 
             <div class="txt_wrap">
-                <img src="<?php echo get_template_directory_uri() ?>/images/furniture.svg" class="icon_size" width="150">
+                <img src="<?php echo get_template_directory_uri() ?>/images/furniture.svg" class="icon_size"
+                    width="150">
                 <h3>
-                In-House
-                Furniture
-                Manufacturing
+                    In-House
+                    Furniture
+                    Manufacturing
                 </h3>
-    
+
                 <p>What sets us apart notably as one of the leading
                     companies in the northern region is our capability to
                     fabricate furniture in our very own production facility,
@@ -84,20 +91,22 @@
                     designs to external manufacturers for mass production, our
                     complete in-house fabrication enables us to closely
                     monitor the progress and quality of our furniture before
-                    they are delivered to our clients’ homes or offices.</p>    
+                    they are delivered to our clients’ homes or offices.</p>
             </div>
 
         </div>
         <div class="content_right_img" data-aos="fade-left" data-aos-offset="300">
             <!-- <img src="<?php echo get_template_directory_uri() ?>/images/about.jpg" class="img-fluid img_box"> -->
-            <img src="<?php echo get_template_directory_uri() ?>/images/inhouse_furniture.jpg" class="img-fluid img_box" width="600">
+            <img src="<?php echo get_template_directory_uri() ?>/images/inhouse_furniture.jpg" class="img-fluid img_box"
+                width="600">
             <div class="shadow_box pic_shadow_right"></div>
         </div>
     </section>
 
     <section class="contain_inner">
         <div class="content_left_img" data-aos="fade-right" data-aos-offset="300">
-            <img src="<?php echo get_template_directory_uri() ?>/images/interior.jpg" class="img-fluid img_box" width="600">
+            <img src="<?php echo get_template_directory_uri() ?>/images/interior.jpg" class="img-fluid img_box"
+                width="600">
             <div class="shadow_box pic_shadow_left"></div>
         </div>
         <div class="content_right_txt">
@@ -105,15 +114,16 @@
             <div class="txt_wrap" data-aos="fade-left" data-aos-offset="300">
                 <img src="<?php echo get_template_directory_uri() ?>/images/interior.svg" class="icon_size" width="150">
                 <h3>
-                Interior
-                Design &
-                Renovation
+                    Interior
+                    Design &
+                    Renovation
                 </h3>
 
                 <p>Having garnered a solid reputation for reliability and timely
                     delivery, Simfur Design began to evolve internally to cater
                     to the ever-changing market demands. Established in
-                    2017, Zeta Home became the company’s interior design
+                    2017, <a href="https://www.facebook.com/ZetaHome" target="_blank">Zeta Home </a> became the
+                    company’s interior design
                     and renovation division specialising in private residences
                     as well as commercial and hospitality projects. Our highly
                     experienced team of interior designers, contractors and
@@ -121,6 +131,9 @@
                     exceptionally streamlined service that is honest,
                     competitive and efficient, while offering you absolute
                     peace of mind.</p>
+
+                <p><a href="https://www.facebook.com/ZetaHome" target="_blank">
+                        Zeta Home Facebook</a></p>
 
             </div>
 
@@ -133,9 +146,9 @@
             <div class="txt_wrap">
                 <img src="<?php echo get_template_directory_uri() ?>/images/project.svg" class="icon_size" width="150">
                 <h3>
-                Project Management
+                    Project Management
                 </h3>
-    
+
                 <p>Apart from our core businesses, many clients have come to
                     us for our project management services. To this end, we
                     are able to help you manage your entire project -
@@ -150,7 +163,8 @@
 
         </div>
         <div class="content_right_img" data-aos="fade-left" data-aos-offset="300">
-            <img src="<?php echo get_template_directory_uri() ?>/images/project_management.jpg" class="img-fluid img_box">
+            <img src="<?php echo get_template_directory_uri() ?>/images/project_management.jpg"
+                class="img-fluid img_box">
             <div class="shadow_box pic_shadow_right"></div>
         </div>
     </section>
@@ -164,23 +178,23 @@
         <div class="content_right_txt" data-aos="fade-left" data-aos-offset="300">
 
             <div class="txt_wrap">
-            <img src="<?php echo get_template_directory_uri() ?>/images/oem.svg" class="icon_size" width="150">
+                <img src="<?php echo get_template_directory_uri() ?>/images/oem.svg" class="icon_size" width="150">
                 <h3>
-                Original
-                Equipment
-                Manufacturer</h3>
+                    Original
+                    Equipment
+                    Manufacturer</h3>
 
                 <p>Furniture Manufacturing</p>
 
                 <p>As a family-owned business with an impeccable track
-                record for commendable quality and workmanship, our
-                success truly lies in the diligence, creativity and
-                innovativeness of our people. If you wish to start your own
-                brand but are unsure of where to start or how to go about
-                it, our consultants may be able to help you realise your
-                ambition. From design and prototyping to mass
-                production, we believe we can help you get on the right
-                track.</p>
+                    record for commendable quality and workmanship, our
+                    success truly lies in the diligence, creativity and
+                    innovativeness of our people. If you wish to start your own
+                    brand but are unsure of where to start or how to go about
+                    it, our consultants may be able to help you realise your
+                    ambition. From design and prototyping to mass
+                    production, we believe we can help you get on the right
+                    track.</p>
 
             </div>
 
